@@ -1,11 +1,19 @@
 
+
 100 Commonly Asked Interview Questions
+
 TOUGHEST QUESTIONS
+
  Tell me about yourself.
+
  What three words would you use to describe yourself?
+
  What three words would your friends use to describe you?
+
  What is your greatest weakness?
+
  Where do you see yourself in 5 years?
+
  Where else are you interviewing?
  Tell me about a conflict you’ve had with a boss or co-worker.
 OTHER COMMON QUESTIONS
