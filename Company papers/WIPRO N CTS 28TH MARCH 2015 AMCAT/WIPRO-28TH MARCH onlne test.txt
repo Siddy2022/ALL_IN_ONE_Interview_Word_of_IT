@@ -1,0 +1,453 @@
+WIPRO ONLINE TEST -28TH MARCH 2015 
+
+?AASHU ONLYYY ON FB
+
+--#?WIPRO? Placement papers & Pattern : Through AMCAT.!
+Selection Process:-
+?#?Round? 1- Written Test (Coding & Aptitude)
+1st round will be AMCAT Online test..so prepare well from OLD AMCAT papers.!
+1st Round: AMCAT ONLINE TEST
+25 Verbal, 16 Quants and 14 Logical Reasoning
+for maths prepare log and probility well rest question will be from profit , % and time and distance can say simple only just log question and probilities question need more attention and for english there will be 2 passage ( 8 questions very easy ) and 3,4 synonyms and 2 antonyms and some fill in the blanks and for technical prepare data strtucre like heap sort and tree and complexity and some code snippet only easy one to crack and for last part prepare from verbal rs aggarwal find the odd out and puzzle ( like 5 peopl wear 5 shirt and like 5 things have to solve such question 5 questions will be there so it's most important rest all is fine )
+More INFO :--
+--- > In coding they will ask c,c++,java n sql..so prepare well.!
+----->> one section might b of automata where u have to write code on d basis of given test cases
+Follow this for Written test : http://placement.freshersworld.com/…/Placement-Paper-Whole-…
+#Round 2- 
+Shortlisted candidates from written test will be called for Face to Face Interview Rounds (Technical & HR)
+
+SOME1 ON BJS ON FB
+
+-- #WIPRO Placement papers & Pattern : Through AMCAT.!
+Selection Process:-
+#Round 1- Written Test (Coding & Aptitude)
+1st round will be AMCAT Online test..so prepare well from OLD AMCAT papers.!
+1st Round: AMCAT ONLINE TEST
+25 Verbal, 16 Quants and 14 Logical Reasoning
+for maths prepare log and probility well rest question will be from profit , % and time and distance can say simple only just log question and probilities question need more attention and for english there will be 2 passage ( 8 questions very easy ) and 3,4 synonyms and 2 antonyms and some fill in the blanks and for technical prepare data strtucre like heap sort and tree and complexity and some code snippet only easy one to crack and for last part prepare from verbal rs aggarwal find the odd out and puzzle ( like 5 peopl wear 5 shirt and like 5 things have to solve such question 5 questions will be there so it's most important rest all is fine )
+More INFO :--
+--- > In coding they will ask c,c++,java n sql..so prepare well.!
+----->> one section might b of automata where u have to write code on d basis of given test cases
+Follow this for Written test : http://placement.freshersworld.com/…/Placement-Paper-Whole-…
+#Round 2- 
+Shortlisted candidates from written test will be called for Face to Face Interview Rounds (Technical & HR)
+
+
+SOME1 IN MRA JOB SEEKERS----
+Aptitude 18 questions
+16 minutes
+Technical : 25 questions 35 mins.
+Logical : 14 questions 14 minutes.
+Verbal : 18 questions 16 minutes.
+The questions were not easy bit
+tough After this round 40 students
+were selected for interview
+technical and HR
+above 80% in their academic
+performances they directly entered
+in the interview process they are
+exempted form aptitude test
+Wipro second section of
+recruitment round was -Form
+filling
+They given a from to fill in which
+we were asked to fill some details.
+It included HR questions Technical
+Questions about your achievement
+about wipo company etc..,
+This wasn't an elimination round.
+keep listening filling these forms It
+is whole details about your career
+Wipro third round os Technical
+round and HR round
+Mainly they are asking basic C
+questions
+Why wipro. Tell me something
+about wipro.
+Also I was given four puzzles. I
+solved 3 out of them.
+Can you write a program to
+convert Celsius to Fahrenheit?
+Can you write a program to count
+the number of chars in a text file.
+Interviewer: What is the diff b/w
+both?
+Me: Told some diff like advantage
+of non continuous.
+Interviewer: what did do as a
+firefox ambassador technically?
+Me: Nothing technically! but
+discussed about Firefox OS in a
+meet.
+Interviewer: Oh! What is an OS?
+Me: Told something like memory
+management, resource
+management, Interface etc
+Interviewer: What is memory
+management?
+Me: told
+Interviewer: What is an interface?
+Me: told something wrong.
+Interviewer: What are the
+characteristics of an os?
+Me: I don't know exactly.
+Interviewer: what is kernel?
+Me: Told about MBR and grub
+Interviewer: what is the function of
+OS?
+Me: blank but told something
+Interviewer: What is the fastest
+memory?
+Me: registers
+Interviewer: Can you build a CPU
+with out using RAM.
+Me: yes
+Interviewer: Where do we use
+commands like grep, fork and some
+UNIX commands and asked me to
+write the syntax?
+Mine Explanation was correct but
+syntax was wrong
+Interviewer: What is a database?
+Interviewer: What is a DBMS?
+What is an entity?
+what is a Data model?
+What are the types of Data models
+you have used?
+Me: Answered all of them but
+spoke something about schema
+Overall wipro recruitment was an
+awesome experience. By god's
+grace and parents blessing. I was
+selected.
+In total 34 students were selected.
+Out of 140
+I wanted to share my experience
+Because other people's experience
+helped me a lot .ALL THE BEST TO ALL
+
+
+This may help in preparing for test of Wipro Amcat....
+AMDOCS Online Test on 22/03 xp through AMCAT
+QA- 16q (16 minute) minimum- 10 ques
+LR- 14q (14 minute) minimum -10 ques
+Eng- 18q (16 minutes) minimum -12 ques
+Techn.- 30q (unix-10, sql-10, c/java/c++ -10 ) (30 minutes)
+Coding{find error & remove and then compile}- 7q (20 minutes)
+# [2^(-2)*10^(-3)]/[2^(-6)*5^(-3)]
+# if CXULG:DWVKH::RYAIF:?
+# most opposite word of RUDE= RESPECTFUL
+1Q on COALESCE command 
+SELECT COALESCE('null',null,'r','eshma')
+& 1Q on RAND() function
+some ques. on vi commands and chmod commands
+Coding Section
+Right now pattern of d code is 
+a
+bc
+abc
+abcd
+if n=4, u hv to print pattern
+a
+ab
+abc
+abcd
+public class CharacterPattern
+{
+public static void printCharacterPattern(int num)
+{
+int i,j,value=1;
+char ch='a';
+char print;
+for(i=0;i<num;i++)
+{
+print=ch;
+for(j=0;j<=i;j++)
+System.out.println((ch++));
+System.out.println(" ");
+}}}
+if want 2 give amdocs tst jst open the link https://amcat.aspiringminds.in/
+User ID: cnt_c_amdocs@aspiringminds.in
+Passowrd: amdocs
+
+
+
+27th march 2015
+
+
+#?WIPRO? Placement Papers & Patterns :- Updated More Info now..!
+
+?#?As? AMCAT is hiring for Wipro so 1st round is really confusing ... If possible follow these both patterns :- 
+
+1. Follow AMCAT Online Test as same like they are conducting for HCL, Mindtree and other....
+
+2. Follow OLD Test Patterns which happened in College CAMPUS Drive ! 
+
+SO Don't Confused Friends... ........?#?Just? prepare accordingly and attend interview......sharing both patterns here..! 
+
+==================================
+
+?#?AMCAT? CONDUCTED ONLINE TEST FOR WIPRO :-
+
+wipro written test pattern was :-
+
+Aptitude 18 questions 16 minutes
+ Technical : 25 questions 35 mins.
+ Logical : 14 questions 14 minutes.
+ Verbal : 18 questions 16 minutes.
+
+OR 
+
+25 Verbal, 16 Quants and 14 Logical Reasoning
+
+for maths prepare log and probility well rest question will be from profit , % and time and distance can say simple only just log question and probilities question need more attention and for english there will be 2 passage ( 8 questions very easy ) and 3,4 synonyms and 2 antonyms and some fill in the blanks and for technical prepare data strtucre like heap sort and tree and complexity and some code snippet only easy one to crack and for last part prepare from verbal rs aggarwal find the odd out and puzzle ( like 5 peopl wear 5 shirt and like 5 things have to solve such question 5 questions will be there so it's most important rest all is fine )
+
+More info : http://placement.freshersworld.com/…/Placement-Paper-Whole-…
+
+========================================
+
+Wipro ?#?OFF_CAMPUS? Placement papers Details :-
+
+?#?Written? test: It consists of 50Q and the duration is 1 hr. 
+
+1. 15Q from verbal :- Topics: active voice & passive voice, reported speech, phrases, one word substitute, synonym, jumbled word, Reading Comprehension) 
+
+2. 15Q from aptitude :- Topics: Blood relations, number series, conclusion from the paragraph, time& work, time distance, theme of the paragraph, boats & streams, avg, clocks, directions) 
+
+3. 20Q from technical :- Topics: C (3), DS(3), general(2), DBMS, OS, unix, networks) 
+
+?#?Verbal? section: 
+
+1. convert the following sentence into indirect speech She said, ?I lived here for many years?. 
+ Ans: She said that she had been living there for many years. 
+
+2. convert the following sentence into passive voice Will the postman post the letters? 
+ Ans: Will the letters be posted by the postman. 
+
+3. what is the meaning of the phrase ? Stuck between the two guns? 
+ Ans: firm with the attitude and don?t bent your attitude. 
+
+4. In the following options what is the best phrase which replaces the underlind phrase in the given sentence. Children must have to be take care while crossing the roads. 
+ A) should have to be 
+ B) must be 
+ C) have to be 
+ D) should be 
+
+5. What we call the person who ? chatter continuously and unintelligently? 
+ (Ans: Jabber) 
+
+6. In a sentence the word known as stumbling is underlined and asked what is similar word (lurching) 
+
+7. A jumbled word known as L O R F S H U I If the word is arranged in correct 1 2 3 4 5 6 7 8 order then what will be the order of number ( Flourish ? 4 1 2 7 3 8 5 6). 
+
+8. Question about Punctuation mark. 
+
+One RC was given on the topic of extra terrestrial life ( 5Q).( It will become easy if u go through the ques) Wipro (Aptitude Section)
+
+?#?Aptitude? Section: 
+
+1. There is a family of six persons P,Q,R,S,T and U.They are Lawyer, Doctor, Teacher, Salesman,Engineer and Accountant. There are two married couples in the family. S, the salesman is married to the Lady Teacher. The Doctor is married to the Lawyer U, The Accountant is the son of Q and brother of T. R, the Lawyer is the daughter-in-law of P. T is the unmarried Engineer. P is the Grandmother of U. Which is the profession of P? 
+ a) Lawyer 
+ b) Teacher 
+ c) Doctor 
+ d )Accountant 
+
+3. There are 6 volumes of books on a rack kept in order(i.e vol.1, vol.2 and so on). Give the position after the following changes were noticed. All books have been changed. 
+ vol.5 was directly to the right of vol.2. 
+ vol.4 has vol.6 to its left and both weren t at vol.3 s place. 
+ vol.1 has vol.3 on right and vol.5 on left. 
+ An even numbered volume is at vol.5 s place. 
+ Find the order in which the books are kept now. 
+ a) 2,5,1,3,6,4 
+ b) 4,1,3,6,5,2 
+ c) 5,4,6,3,1,2 
+ d) 3,5,4,2,6,1 
+
+4.Examine carefully the following sequence of numbers: 
+ 1 
+ 11 
+ 21 
+ 1211 
+ 111221 
+ 312211 
+ 13112221 
+ 1113213211 
+ 31131211131221 
+ 13211311123113112211 
+
+Hint: ( in first row one 1, in 2nd row two 1s, in 3rd row one 1,???.. 
+
+Although the sequence appear to behave totally at random, In fact , after the first sequence, each sequence is constructed in a precise and methodical way based on the previous one. What is the next sequence? 
+
+a)11322212311233113232211211 
+b)11131221133112132113212221 
+c)11131221133112221132122211 
+d)11131221133312112211321222 
+
+5.. 
+ I) C is father of N but N is not son of C. 
+ II) M is daughter of B and sister of P. 
+ III) P is brother of N. 
+
+Which of the following is can not be inferred from the information given? 
+ a) N is brother of P 
+ b) B has three children 
+ c) N is younger to P 
+ d) B has 
+
+6. Divide 30 by half and add 10. what is the new number 
+ A) 20 
+ B)25 
+ C) 70 
+ D) 80 
+
+7. theme detection of a paragraph.( sorry I didn?t the remember the paragraph) 
+
+8. one problem on volumes 
+
+9. A wire of length 42c.m. is made into the form a rectangle such that the width is double the length.Then what are the values of length and width respectively ( 7,14). 
+
+10. two trains are traveling from point A to point B such that the speed of first train is 65kmph and the speed of 2nd train is 29kmph. What is the distance b/w A&B such that the slower train reached 5hrs late compared to the faster train. 
+
+11. A motorboat whose speed is 15kmph in still water goes 30kmph downstream and comes back in a total of 4hrs 30min. the speed of the stream in kmph is (5kmph). 
+
+?#?Technical? Section 
+
+1. what is the most commonly used display device in monitors. (CRT). 
+
+2. main() 
+ { 
+ int i=6720,j=4; 
+ while(i%j= =0) 
+ { 
+ i=i/j; 
+ j=j+1; 
+ } 
+ } 
+
+What is the value of j at the end of the loop. (9); 
+
+3. What is the output of the program 
+
+4. # define Max( if (x<y), printf(?x is greater than y))else; 
+ main() 
+ { 
+ int x,y; 
+ if (x<y) 
+ Max(x,y); 
+ else 
+ printf( ? x is not greater than y?); 
+ } 
+ ( Iam not sure about the Q, but the ans is compile time error); 
+
+5. 1Q on pointers like a[2][2] then how can u represent the valu of a[2][1] by using pointers. ( *((a+2)+1) . Iam not sure about the ans). 
+
+6. what is wrong about stacks ( Ans is ? Stack is referred to as fifo?); 
+
+7. In worst case Quick sort becomes which sort (Bouble sort) 
+
+8. one Q on the conversion of infix to prefix expression like ((A-B)*(C+D))/(F-G) 
+
+Some Qs. On : - 
+
+Unix commands(3)
+ DBMS(2)
+ Memory mgt(2)
+ cpp(1)
+ java(1) 
+ harddisk(1)
+
+Verbal(7 to 9)
+ Aptitude( 8)
+ Technical(9); 
+
+==============================
+
+?#?Another? WIPRO PLACEMENT Papers : Conducted in College Campuses( shared by Some placed guys)
+
+Online Aptitude Test :- 
+
+?#?First? section is vocabulary, Second Aptitude, Third is Technical 
+
+Voc is very easy about 10 or 15 I don t remember the exact number, last quest was paragraph based on scientist research . tips fist read the ques on paragraph then read the para so that u have an idea on where 2 concentrate in the paragraph. Some of voc ques that I can remember r 1."stuck 2 guns" means options r firm with the attitude,. Some other easy ques. 
+
+Aptitude section do r.s. aggarwal buk that will b more than sufficient. many ques r copied 4m agar without even changing numerical values. 
+
+1.Ques based on data interpretation little tough and lengthy based on birth rate.... 
+
+2.Quest based on numb seqence 
+ 1 
+ 12 
+ 231 
+ 1231 
+ 13222 
+
+Some series in this fashion very lenthy series. v were supposed 2 find next line of the series. tip is go through the option and solve. 
+
+3.ques on blood relation tip draw diagram and solve. quiet easy 
+
+4.quest on simple interest and compound interest something like s.i-c.i=sum this ques was diretly 4m aggarwal with same numericals. 
+
+5.que based on no. of men 9 men do some work in some days and how many days will 13 men take. easy one. 
+
+#TECHNICAL :-
+
+1.for loop condition to print 
+ 1 
+ 12 
+ 123 
+ 1234 
+ 123...n 
+ 4 options were given like for(I=0;I<=j;I++) some more options try and solve this problem 
+
+2. Questions based on data structure, C, Unix,C++ 
+
+3. Ques on c++ 
+ {
+ classes 
+ object1: 
+ ..... 
+ protected 
+ object2: 
+ .... 
+ Object3: 
+ } 
+ which object is not accessible by main program.i don t remembr the qu properly 
+
+3.ques based on networking. when u switch on compu some problem due 2 network .....answer is in ques itself easy one. 
+
+4. Easy Ques Ans is clipart. 
+
+That s all I can remember.10 ques in voca, 20 on apti, 20 on techni I am not sure.There is no neg markin so try and answer all the que. First ans the ones u know properly set about 5 min 2 mark the ones u have left unanswe. but sectional cutoff is there. For ECE students cutoff is different(I heard ). 4 ec students cutoff is less in techni section and more in apt section. 
+
+More info :- http://www.indiabix.com/placement-papers/wipro/4353
+
+============================
+
+?#?More? Papers check here 
+
+1. http://placement.freshersworld.com/placement-pa…/…/WIPRO/726
+
+ 2. http://www.indiabix.com/placement-papers/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
