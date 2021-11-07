@@ -1,0 +1,310 @@
+COMPUTER NETWORK-1
+1.What are the two types of transmission technology available?
+Answer:
+(i) Broadcast   
+(ii) point-to-point
+
+2.What is subnet?
+Answer: 
+A generic term for section of a large networks usually separated by a bridge or router. 
+
+3.Difference between the communication and transmission.
+Answer: 
+TRANSMISSION:
+Transmission is a physical movement of information and concern issues like bit polarity, synchronization, clock etc.
+COMMUNICATION: 
+Communication means the meaning full exchange of information between two communication media.
+
+4.What are the possible ways of data exchange?
+Answer: 
+(i) Simplex 
+(ii) Half-duplex 
+(iii) Full-duplex.
+
+5.What is SAP?
+Answer:
+Series of interface points that allow other computers to communicate with the other layers of network protocol stack.
+
+6.What do you meant by "triple X" in Networks? 
+Answer:
+The function of PAD (Packet Assembler Disassembler) is described in a document known as X.3. The standard protocol has been defined between the terminal and the PAD, called X.28; another standard protocol exists between hte PAD and the network, called X.29. Together, these three recommendations are often called "triple X"
+
+7.What is frame relay, in which layer it comes? 
+Answer:
+Frame relay is a packet switching technology. It will operate in the data link layer.
+ 
+8.What is terminal emulation, in which layer it comes?
+Answer:
+Telnet is also called as terminal emulation. It belongs to application layer.
+
+9.What is Beaconing?
+Answer:
+The process that allows a network to self-repair networks problems. The stations on the network notify the other stations on the ring when they are not receiving the transmissions. Beaconing is used in Token ring and FDDI networks.
+
+10.What is redirector?
+Answer:
+Redirector is software that intercepts file or prints I/O requests and translates them into network requests. This comes under presentation layer.
+
+11.What is NETBIOS and NETBEUI?
+Answer:
+NETBIOS
+NETBIOS is a programming interface that allows I/O requests to be sent to and received from a remote computer and it hides the networking hardware from applications.
+NETBEUI
+NETBEUI is NetBIOS extended user interface. A transport protocol designed by microsoft and IBM for the use on small subnets.
+
+12.What is RAID?
+Answer:
+A method for providing fault tolerance by using multiple hard disk drives.
+
+13.What is passive topology?
+Answer:
+When the computers on the network simply listen and receive the signal, they are referred to as passive because they don’t amplify the signal in any way. Example for passive topology - linear bus.
+
+14.What is Brouter?
+Answer:
+Hybrid devices that combine the features of both bridges and routers.
+
+15.What is cladding?
+Answer:
+A layer of a glass surrounding the center fiber of glass inside a fiber-optic cable.
+
+16.What is point-to-point protocol
+Answer:
+A communications protocol used to connect computers to remote networking services including Internet service providers.
+
+17.How Gateway is different from Routers?
+Answer:
+A gateway operates at the upper levels of the OSI model and translates information between two completely different network architectures or data formats
+
+18.What is attenuation?
+Answer:
+The degeneration of a signal over distance on a network cable is called attenuation.
+
+19.What is MAC address?
+Answer:
+The address for a device as it is identified at the Media Access Control (MAC) layer in the network architecture. MAC address is usually stored in ROM on the network adapter card and is unique.
+
+20.Difference between bit rate and baud rate.
+Answer: 
+Bit rate is the number of bits transmitted during one second whereas baud rate refers to the number of signal units per second that are required to represent those bits.
+baud rate  = bit rate / N 
+where N is no-of-bits represented by each signal shift.
+
+21.What is Bandwidth?
+Answer:
+Every line has an upper limit and a lower limit  on the frequency of signals it can carry. This limited range is called the bandwidth.
+
+22.What are the types of Transmission media?
+Answer:
+Signals are usually transmitted over some transmission media that are broadly classified in to two categories.
+A)GUIDED MEDIA:
+These are those that provide a conduit from one device to another that include twisted-pair, coaxial cable and fiber-optic cable. A signal traveling along any of these media is directed and is contained by the physical limits of the medium. Twisted-pair and coaxial cable use metallic that accept and transport signals in the form of electrical current. Optical fiber is a glass or plastic cable that accepts and transports signals in the form of light.
+B) UNGUIDED MEDIA: 
+This is the wireless media that transport electromagnetic waves without using a physical conductor. Signals are broadcast either through air. This is done through radio communication, satellite communication and cellular telephony.
+
+23.What is Project 802?
+Answer:
+It is a project started by IEEE to set standards to enable intercommunication between equipment from a variety of manufacturers. It is a way for specifying functions of the physical layer, the data link layer and to some extent the network layer to allow for interconnectivity of major LAN protocols.
+It consists of the following:
+
+802.1 is an internetworking standard for compatibility of different LANs and MANs across protocols.
+802.2 Logical link control (LLC) is the upper sublayer of the data link layer which is non-architecture-specific, that is remains the same for all IEEE-defined LANs. 
+Media access control (MAC) is the lower sublayer of the data link layer that contains some distinct modules each carrying proprietary information specific to the LAN product being used. The modules are Ethernet LAN (802.3), Token ring LAN (802.4), Token bus LAN (802.5).
+802.6 is distributed queue dual bus (DQDB) designed to be used in MANs.
+
+
+24.What is Protocol Data Unit?
+Answer:
+The data unit in the LLC level is called the protocol data unit (PDU). The PDU contains of four fields a destination service access point (DSAP), a source service access point (SSAP), a control field and an information field. DSAP, SSAP are addresses used by the LLC to identify the protocol stacks on the receiving and sending machines that are generating and using the data. The control field specifies whether the PDU frame is a information frame (I - frame) or a supervisory frame (S - frame) or a unnumbered frame (U - frame).
+
+25.What are the different type of networking / internetworking devices? 
+Answer:
+REPEATER:
+Also called a regenerator, it is an electronic device that operates only at physical layer. It receives the signal in the network before it becomes weak, regenerates the original bit pattern and puts the refreshed copy back in to the link.
+BRIDGES: 
+These operate both in the physical and data link layers of LANs of same type. They divide a larger network in to smaller segments. They contain logic that allow them to keep the traffic for each segment separate and thus are repeaters that relay a frame only the side of the segment containing the intended recipent and control congestion.
+ROUTERS:
+They relay packets among multiple interconnected networks (i.e. LANs of different type). They operate in the physical, data link and network layers. They contain software that enable them to determine which of the several possible paths is the best for a particular transmission.
+GATEWAYS:
+They relay packets among networks that have different protocols (e.g. between a LAN and a WAN). They accept a packet formatted for one protocol and convert it to a packet formatted for another protocol before forwarding it. They operate in all seven layers of the OSI model.
+
+
+
+COMPUTER NETWORK-2
+26.What is ICMP?
+Answer:
+ICMP is Internet Control Message Protocol, a network layer protocol of the TCP/IP suite used by hosts and gateways to send notification of datagram problems back to the sender. It uses the echo test / reply to test whether a destination is reachable and responding. It also handles both control and error messages.
+
+27.What are the data units at different layers of the TCP / IP protocol suite?
+Answer:
+The data unit created at the application layer is called a message, at the transport layer the data unit created is called either a segment or an user datagram, at the network layer the data unit created is called the datagram, at the data link layer the datagram is encapsulated in to a frame and finally transmitted as signals along the transmission media.
+
+28.What is difference between ARP and RARP?
+Answer:
+The address resolution protocol (ARP) is used to associate the 32 bit IP address with the 48 bit physical address, used by a host or a router to find the physical address of another host on its network by sending a ARP query packet that includes the IP address of the receiver.
+The reverse address resolution protocol (RARP) allows a host to discover its Internet address when it knows only its physical address.
+
+29.What is the minimum and maximum length of the header in the TCP segment and IP datagram?
+Answer:
+The header should have a minimum length of 20 bytes and can have a maximum length of 60 bytes.   
+                     
+30.What is the range of addresses in the classes of internet addresses? 
+Answer:
+Class A      0.0.0.0      - 127.255.255.255
+Class B 128.0.0.0 - 191.255.255.255
+Class C 192.0.0.0 - 223.255.255.255
+Class D 224.0.0.0 -  239.255.255.255
+Class E 240.0.0.0 - 247.255.255.255 
+
+31.What is the difference between TFTP and FTP application layer protocols?
+Answer:
+The Trivial File Transfer Protocol (TFTP) allows a local host to obtain files from a remote host but does not provide reliability or security. It uses the fundamental packet delivery services offered by UDP.
+The File Transfer Protocol (FTP) is the standard mechanism provided by TCP / IP for copying a file from one host to another. It uses the services offer by TCP and so is reliable and secure. It establishes two connections (virtual circuits) between the hosts, one for data transfer and another for control information.
+
+32.What are major types of networks and explain?
+Answer:
+SERVER-BASED NETWORK:
+Peer-to-peer network, computers can act as both servers sharing resources and as clients using the resources.
+PEER-TO-PEER NETWORK
+Server-based networks provide centralized control of network resources and rely on server computers to provide security and network administration
+
+33.What are the important topologies for networks?
+Answer:
+BUS TOPOLOGY:
+In this each computer is directly connected to primary network cable in a single line.
+Advantages:
+Inexpensive, easy to install, simple to understand, easy to extend.
+STAR TOPOLOGY:
+In this all computers are connected using a central hub.
+Advantages:
+Can be inexpensive, easy to install and reconfigure and easy to trouble shoot physical problems.
+RING TOPOLOGY:
+In this all computers are connected in loop.
+Advantages:
+All computers have equal access to network media, installation can be simple, and signal does not degrade as much as in other topologies because each computer regenerates it.
+
+34.What is mesh network?
+Answer:
+A network in which there are multiple network links between computers to provide multiple paths for data to travel.
+
+35.What is difference between baseband and broadband transmission?
+Answer:
+In a baseband transmission, the entire bandwidth of the cable is consumed by a single signal. In broadband transmission, signals are sent on multiple frequencies, allowing multiple signals to be sent simultaneously.
+
+36.Explain 5-4-3 rule?
+Answer:
+In a Ethernet network, between any two points on the network ,there can be no more than five network segments or four repeaters, and of those five segments only three of segments can be populated.
+
+37.What MAU?
+Answer:
+In token Ring , hub is called Multistation Access Unit(MAU).
+
+38.What is the difference between routable and non- routable protocols?
+Answer:
+Routable protocols can work with a router and can be used to build large networks. Non-Routable protocols are designed to work on small, local networks and cannot be used with a router
+
+39.Why should you care about the OSI Reference Model?
+Answer:
+It provides a framework for discussing network operations and design.
+
+40. What is logical link control?
+Answer:
+One of two sublayers of the data link layer of OSI reference model, as defined by the IEEE 802 standard. This sublayer is responsible for maintaining the link between computers when they are sending data across the physical network connection. 
+
+41. What is virtual channel?
+Answer:
+Virtual channel is normally a connection from one source to one destination, although multicast connections are also permitted. The other name for virtual channel is virtual circuit.
+
+42.What is virtual path?
+Answer:
+Along any transmission path from a given source to a given destination, a group of virtual circuits can be grouped together into what is called path.
+
+43. What is packet filter?
+Answer:
+Packet filter is a standard router equipped with some extra functionality. The extra functionality allows every incoming or outgoing packet to be inspected. Packets meeting some criterion are forwarded normally. Those that fail the test are dropped.
+
+44.What is traffic shaping?
+Answer:
+One of the main causes of congestion is that traffic is often busy. If hosts could be made to transmit at a uniform rate, congestion would be less common. Another open loop method to help manage congestion is forcing the packet to be transmitted at a more predictable rate. This is called traffic shaping.
+
+45.What is multicast routing?
+Answer:
+Sending a message to a group is called multicasting, and its routing algorithm is called multicast routing.
+
+46.What is region?
+Answer:
+When hierarchical routing is used, the routers are divided into what we will call regions, with each router knowing all the details about how to route packets to destinations within its own region, but knowing nothing about the internal structure of other regions.
+
+47.What is silly window syndrome? 
+Answer:
+It is a problem that can ruin TCP performance. This problem occurs when data are passed to the sending TCP entity in large blocks, but an interactive application on the receiving side reads 1 byte at a time.
+
+48.What are Digrams and Trigrams?
+Answer:
+The most common two letter combinations are called as digrams. e.g. th, in, er, re and an. The most common three letter combinations are called as trigrams. e.g. the, ing, and, and ion.
+
+49.Expand IDEA.
+Answer:
+IDEA stands for International Data Encryption Algorithm.
+
+50.What is wide-mouth frog?
+Answer:
+Wide-mouth frog is the simplest known key distribution center (KDC) authentication protocol.
+
+
+COMPUTER NETWORK-3
+51. What is Mail Gateway?
+Answer:
+It is a system that performs a protocol translation between different electronic mail delivery protocols.
+
+52.What is IGP (Interior Gateway Protocol)?
+Answer:
+It is any routing protocol used within an autonomous system.
+
+53.What is EGP (Exterior Gateway Protocol)?
+Answer:
+It is the protocol the routers in neighboring autonomous systems use to identify the set of networks that can be reached within or via each autonomous system.
+
+54.What is autonomous system?
+Answer:
+It is a collection of routers under the control of a single administrative authority and that uses a common Interior Gateway Protocol.
+
+55.What is BGP (Border Gateway Protocol)?
+Answer:
+It is a protocol used to advertise the set of networks that can be reached with in an autonomous system. BGP enables this information to be shared with the autonomous system. This is newer than EGP (Exterior Gateway Protocol).
+
+56.What is Gateway-to-Gateway protocol?
+Answer:
+It is a protocol formerly used to exchange routing information between Internet core routers.
+
+57.What is NVT (Network Virtual Terminal)?
+Answer:
+It is a set of rules defining a very simple virtual terminal interaction. The NVT is used in the start of a Telnet session.
+
+58.What is a Multi-homed Host?
+Answer:
+It is a host that has a multiple network interfaces and that requires multiple IP addresses is called as a Multi-homed Host.
+
+59.What is Kerberos?
+Answer:
+It is an authentication service developed at the Massachusetts Institute of Technology. Kerberos uses encryption to prevent intruders from discovering passwords and gaining unauthorized access to files.
+
+60.What is OSPF?
+Answer:
+It is an Internet routing protocol that scales well, can route traffic along multiple paths, and uses knowledge of an Internet's topology to make accurate routing decisions.
+
+61.What is Proxy ARP?
+Answer:
+It is using a router to answer ARP requests. This will be done when the originating host believes that a destination is local, when in fact is lies beyond router.
+
+62.What is SLIP (Serial Line Interface Protocol)?
+Answer:
+It is a very simple protocol used for transmission of IP datagrams across a serial line.
+
+63.What is RIP (Routing Information Protocol)?
+Answer:
+It is a simple protocol used to exchange information between the routers. 
+
+64.What is source route?
+Answer:
+It is a sequence of IP addresses identifying the route a datagram must follow. A source route may optionally be included in an IP datagram header. 

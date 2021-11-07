@@ -1,0 +1,2727 @@
+HISTORY OF C
+ C language is a structure oriented programming language, was developed at Bell Laboratories in 1972 by Dennis Ritchie
+ C language features were derived from earlier language called “B” (Basic Combined Programming Language – BCPL)
+C language was invented for implementing UNIX operating system
+ In 1978, Dennis Ritchie and Brian Kernighan published the first edition “The C Programming Language” and commonly known as K&R C
+In 1983, the American National Standards Institute (ANSI) established a committee to provide a modern, comprehensive definition of C. The resulting definition, the ANSI standard, or “ANSI C”, was completed late 1988.
+
+DATA TYPE
+C DATA TYPES ARE DEFINED AS THE DATA STORAGE FORMAT THAT A VARIABLE CAN STORE A DATA TO PERFORM A SPECIFIC OPERATION.
+DATA TYPES ARE USED TO DEFINE A VARIABLE BEFORE TO USE IN A PROGRAM.
+SIZE OF VARIABLE, CONSTANT AND ARRAY ARE DETERMINED BY DATA TYPES.
+INTEGER DATA TYPE:
+Integer data type allows a variable to store numeric values.
+“int” keyword is used to refer integer data type.
+The storage size of int data type is 2 or 4 or 8 byte.
+It varies depend upon the processor in the CPU that we use. If we are using 16 bit processor, 2 byte (16 bit) of memory will be allocated for int data type.
+Like wise, 4 byte (32 bit) of memory for 32 bit processor and 8 byte (64 bit) of memory for 64 bit processor is allocated for int datatype.
+int (2 byte) can store values from -32,768 to +32,767
+int (4 byte) can store values from -2,147,483,648 to +2,147,483,647.
+If you want to use the integer value that crosses the above limit, you can go for “long int” and “long long int” for which the limits are very high.
+Note:
+We can’t store decimal values using int data type.
+If we use int data type to store decimal values, decimal values will be truncated and we will get only whole number.
+In this case, float data type can be used to store decimal values in a variable.
+CHARACTER DATA TYPE:
+Character data type allows a variable to store only one character.
+Storage size of character data type is 1. We can store only one character using character data type.
+“char” keyword is used to refer character data type.
+For example, ‘A’ can be stored using char datatype. You can’t store more than one character using char data type.
+Please refer C – Strings topic to know how to store more than one characters in a variable.
+FLOATING POINT DATA TYPE:
+Floating point data type consists of 2 types. They are,
+
+FLOAT
+DOUBLE
+
+1. FLOAT:
+Float data type allows a variable to store decimal values.
+Storage size of float data type is 4. This also varies depend upon the processor in the CPU as “int” data type.
+We can use up-to 6 digits after decimal using float data type.
+For example, 10.456789 can be stored in a variable using float data type.
+2. DOUBLE:
+Double data type is also same as float data type which allows up-to 10 digits after decimal.
+The range for double datatype is from 1E–37 to 1E+37.
+
+
+THE DECISION CONTROL STRUCTURE
+In decision control statements (C if else and nested if), group of statements are executed when condition is true.  If condition is false, then else part statements are executed.
+There are 3 types of decision making control statements in C language. They are,
+If statement
+If-else statement
+Nested if statement
+ NOTE- PLEASE FIND THE ATTACHMENT WITH THIS NOTES FOR SYNTAX AND DESCRIPTION OF DECISION CONTROL STATEMENT
+
+
+ Example program for if statement in C:
+      
+In “if” control statement, respective block of code is executed when condition is true.
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int m=40,n=40;
+  if (m == n)
+  {
+      printf("m and n are equal");
+  }
+getch();
+ }
+
+Output:
+m and n are equal
+
+Example program for if else statement in C:
+      
+In C if else control statement, group of statements are executed when condition is true.  If condition is false, then else part statements are executed.
+
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+  int m=40,n=20;
+  if (m == n) {
+      printf("m and n are equal");
+  }
+  else {
+        printf("m and n are not equal");
+  }
+ getch();
+ }                                               
+
+Output:
+m and n are not equal
+
+
+Example program for nested if statement in C: 
+ In “nested if” control statement, if condition 1 is false, then condition 2 is checked and statements are executed if it is true. 
+If condition 2 also gets failure, then else part is executed.
+
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+int m=40,n=20;
+if (m>n)
+{
+printf("m is greater than n");
+}
+else if(m<n>
+{  
+printf("m is less than n");
+}
+else
+{  
+printf("m is equal to n");
+}
+getch();
+}
+
+Output:
+m is greater than n
+
+
+THE LOOP CONTROL STRUCTURE
+The statements which are used to execute only specific block of statements in a given series of block are called case control statements.
+There are 4 types of case statements in C language. They are,
+
+switch case
+break
+continue
+goto
+
+1. switch case statement:
+This is used to execute only specific case statements based on the switch expression.
+
+Syntax :
+switch (expression)
+{         
+case label1:                  
+statements;                 
+break;       
+case label2:                  
+statements;                 
+break;         
+default:                 
+statements;                 
+break;
+}
+
+Example program for switch..case:
+#include <stdio.h>
+int main ()
+{
+int value = 3;
+switch(value)
+{
+case 1:
+printf("Value is 1 \n" );
+break;
+case 2:
+printf("Value is 2 \n" );
+break; 
+case 3:
+printf("Value is 3 \n" );
+break;
+case 4:
+printf("Value is 4 \n" );
+break;
+default :
+printf("Value is other than 1,2,3,4 \n" );
+}
+return 0;
+}
+
+Output:
+Value is 3
+
+
+2. break statement:
+Break statement is used to terminate the while loops, switch case loops and for loops from the subsequent execution.
+
+Syntax:
+break;
+
+Example program for break:
+#include <stdio.h>
+int main()
+{
+  int i;
+  for(i=0;i
+  {
+      if(i==5)
+      {
+          printf("Coming out of for loop when i = 5");
+    break;
+      }
+      printf("%d\n",i);
+  }
+}
+
+Output:
+01234 Coming out of for loop when i = 5
+
+
+
+3. Continue statement:
+Continue statement is used to continue the next iteration of for loop, while loop and do-while loops.  So, the remaining statements are skipped within the loop for that particular iteration.
+
+Syntax : continue;
+
+
+Example program for continue:
+#include <stdio.h>
+int main()
+{
+  int i;
+  for(i=0;i
+  {
+      if(i==5 || i==6)
+      {
+          printf("Skipping %d from display using " \
+                 "continue statement \n",i);
+    continue;
+      }
+      printf("%d\n",i);
+  }
+}
+Output:
+01234 Skipping 5 from display using continue statement Skipping 6 from display using continue statement 789
+
+
+
+4. goto statements:
+goto statements is used to transfer the normal flow of a program to the specified label in the program.
+
+Syntax:
+{
+         …….
+         go to label;
+         …….
+         …….
+         Label:
+                  Statements;
+}
+
+Example program for goto:
+#include <stdio.h>
+int main()
+{
+  int i;
+  for(i=0;i
+  {
+     if(i==5)
+      {
+          printf(" We are using goto statement when i = 5 \n");
+          goto HAI;
+      }
+      printf("%d\n",i);
+  }
+HAI : printf("Now, we are inside label name hai \n");
+}
+ Output:
+01234 We are using goto statement when i = 5
+
+
+THE CASE CONTROL STRUCTURE
+The statements which are used to execute only specific block of statements in a given series of block are called case control statements.
+There are 4 types of case statements in C language. They are,
+
+switch case
+break
+continue
+goto
+
+1. switch case statement:
+This is used to execute only specific case statements based on the switch expression.
+
+Syntax :
+switch (expression)
+{         
+case label1:                  
+statements;                 
+break;       
+case label2:                  
+statements;                 
+break;         
+default:                 
+statements;                 
+break;
+}
+
+Example program for switch..case:
+#include <stdio.h>
+int main ()
+{
+int value = 3;
+switch(value)
+{
+case 1:  
+printf("Value is 1 \n" );  
+break;
+case 2:  
+printf("Value is 2 \n" );  
+break;  
+case 3:  
+printf("Value is 3 \n" );  
+break;
+case 4:  
+printf("Value is 4 \n" );  
+break;
+default :  
+printf("Value is other than 1,2,3,4 \n" );
+}
+return 0;
+}
+
+Output:
+Value is 3
+
+
+2. break statement:
+Break statement is used to terminate the while loops, switch case loops and for loops from the subsequent execution.
+
+Syntax:
+break;
+
+Example program for break:
+#include <stdio.h>
+int main()
+{
+  int i;
+  for(i=0;i
+  {
+      if(i==5)
+      {
+          printf("Coming out of for loop when i = 5");
+    break;
+      }
+      printf("%d\n",i);
+  } 
+}
+
+Output:
+01234 Coming out of for loop when i = 5
+
+
+
+3. Continue statement:
+Continue statement is used to continue the next iteration of for loop, while loop and do-while loops.  So, the remaining statements are skipped within the loop for that particular iteration.
+
+Syntax : continue;
+
+
+Example program for continue:
+#include <stdio.h>
+int main()
+{
+  int i;
+  for(i=0;i
+  {
+      if(i==5 || i==6)
+      {
+          printf("Skipping %d from display using " \
+                 "continue statement \n",i);
+    continue;
+      }
+      printf("%d\n",i);
+  } 
+}
+Output:
+01234 Skipping 5 from display using continue statement Skipping 6 from display using continue statement 789
+
+
+
+4. goto statements:
+goto statements is used to transfer the normal flow of a program to the specified label in the program.
+
+Syntax:
+{
+         …….
+         go to label;
+         …….
+         …….
+         Label:
+                  Statements;
+}
+
+Example program for goto:
+#include <stdio.h>
+int main()
+{
+  int i;
+  for(i=0;i
+  {
+     if(i==5)
+      {
+          printf(" We are using goto statement when i = 5 \n");
+          goto HAI;
+      }
+      printf("%d\n",i);
+  } 
+HAI : printf("Now, we are inside label name hai \n");
+}
+ Output:
+01234 We are using goto statement when i = 5
+
+
+ARRAY IN C
+ C Array is a collection of variables belongings to the same data type. You can store group of data of same data type in an array.
+
+Array might be belonging to any of the data types
+Array size must be a constant value.
+Always, Contiguous (adjacent) memory locations are used to store array elements in memory.
+It is a best practice to initialize an array to zero or null while declaring, if we don’t assign any values to array.
+
+Example for C Arrays:
+
+int a[10];       // integer array
+char b[10];   // character array   i.e. string
+Types of C arrays:
+There are 2 types of C arrays. They are:
+
+One dimensional array
+Multi dimensional array
+Two dimensional array
+Three dimensional array, four dimensional array etc…
+1. One dimensional array in C:
+Syntax : data-type arr_name[array_size];
+
+Example program for one dimensional array in C:
+#include<stdio.h>
+int main()
+{
+    int i;
+    int arr[5] = {10,20,30,40,50};  
+    // declaring and Initializing array in C
+    //To initialize all array elements to 0, use int arr[5]={0};
+    /* Above array can be initialized as below also
+       arr[0] = 10;
+       arr[1] = 20;
+       arr[2] = 30;
+       arr[3] = 40;
+       arr[4] = 50;
+    */
+    for (i=0;i
+    {
+        // Accessing each variable
+        printf("value of arr[%d] is %d \n", i, arr[i]);
+    }
+}
+
+Output:
+value of arr[0] is 10
+value of arr[1] is 20
+value of arr[2] is 30
+value of arr[3] is 40
+value of arr[4] is 50
+
+
+2. Two dimensional array in C: 
+
+ Two dimensional array is nothing but array of array.
+syntax : data_type array_name[num_of_rows][num_of_column]
+
+
+Example program for two dimensional array in C:
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    // declaring and Initializing array
+    int arr[2][2] = {10,20,30,40};
+    /* Above array can be initialized as below also
+       arr[0][0] = 10;   // Initializing array
+       arr[0][1] = 20;
+       arr[1][0] = 30;
+       arr[1][1] = 40;
+    */
+    for (i=0;i
+    {
+       for (j=0;j
+       {
+          // Accessing variables
+          printf("value of arr[%d] [%d] : %d\n",i,j,arr[i][j]);
+       }
+    }
+}
+
+Output:
+value of arr[0] [0] is 10
+value of arr[0] [1] is 20
+value of arr[1] [0] is 30
+value of arr[1] [1] is 40
+
+
+
+
+STRING IN C
+C Strings are nothing but array of characters ended with null character (‘\0’).
+This null character indicates the end of the string.
+Strings are always enclosed by double quotes. Whereas, character is enclosed by single quotes in C.
+Example for C string: 
+
+char string[20] = { ‘d’ , ’i’ , ‘v’ , ‘a’ , ‘s’ , ‘n’ , ‘i’ , ‘k’ , ‘h’ , ’r’ , ‘a’  , ‘\0’}; (or)
+char string[20] = “divasnikhra”; (or)
+char string []    = “divasnikhra”;
+Difference between above declarations are, when we declare char as “string[20]“, 20 bytes of memory space is allocated for holding the string value.
+When we declare char as “string[]“, memory space will be allocated as per the requirement during execution of the program.
+
+Example program for C string:
+
+#include <stdio.h>
+#include<conio.h>
+void main ()
+{
+   char string[20] = "divasnikhra";
+   printf("The string is :  %s \n", string );
+   getch();
+}
+
+Output:
+The string is :     divasnikhra
+
+
+C String functions:
+string.h header file supports all the string functions in C language. All the string functions are given below. Click on each function name to display an example program.
+
+1 strcat(str1, str2)  Concatenates str2 at the end of str1.
+
+2 strcpy(str1, str2)  Copies str2 into str1
+
+3 strlen(strl)  gives the length of str1.
+
+4 strcmp(str1, str2)  Returns 0 if str1 is same as str2. Returns <0 if strl < str2. Returns >0 if str1 > str2.
+
+5 strchr(str1, char)  Returns pointer to first occurrence of char in str1.
+
+6 strstr(str1, str2)  Returns pointer to first occurrence of str2 in str1.
+
+7 strcmpi(str1,str2)  Same as strcmp() function. But, this function negotiates case.  “A” and “a” are treated as same.
+
+8 strdup()  duplicates the string
+
+9 strlwr()  converts string to lowercase
+
+10 strncat()  appends a portion of string to another
+
+11 strncpy()  copies given number of characters of one string to another
+
+12 strrchr()  last occurrence of given character in a string is found
+
+13 strrev()  reverses the given string
+
+14 strset()  sets all character in a string to given character
+
+15 strupr()  converts string to uppercase
+
+16 strtok()  tokenizing given string using delimiter
+
+
+Example program for strlen:
+It counts number of characters available in a string.
+
+#include <stdio.h>
+#include <string.h>
+#include<conio.h>
+void main( )
+{
+    int len1, len2 ;
+    char array1[50]="virtualctutorials.blogspot.com" ;
+    char array2[50]="Divasnikhra " \
+                    "Avantika";
+    len1 = strlen(array1) ;
+    len2 = strlen(array2) ;
+    printf ( "\nFirst string length  = %d \n" , len1 ) ;
+    printf ( "\nSecond string length  = %d \n" , len2 ) ;
+    getch();
+}
+
+Output:
+First string length = 30
+Second string length = 19
+
+
+Example program for strcpy:
+It copies contents of one string to another
+
+#include <stdio.h>
+#include <string.h>
+#include<conio.h>
+void main( )
+{
+   char source[ ] = "virtualctutorials.blogspot.com" ;
+   char target[50] ;
+   strcpy ( target, source ) ;
+   printf ( "\nContetnt of source string = %s", source ) ;
+   printf ( "\nContetnt of target string = %s", target ) ;
+   getch();
+}
+
+Output:
+Contetnt of source string = virtualctutorials.blogspot.com
+Contetnt of target string = virtualctutorials.blogspot.com
+
+
+Example program for strcat:
+It concatenates two given strings.
+
+#include <stdio.h>
+#include <string.h>
+#include<conio.h>
+void main( )
+{
+   char source[ ] = " Divas" ;
+   char target[20]= " C Tutorial" ;
+   strcat ( target, source ) ;
+   printf ( "\nContent of source string = %s", source ) ;
+   printf ( "\nContetnt of target string = %s", target ) ;
+   getch();
+}
+
+Output:
+Contetnt of source string = Divas
+Contetnt of target string = C Tutorial Divas
+
+
+Example program for strcmp:
+It compares two strings and returns 0 if they are same. If string1< string2, it returns < 0 value. If string1> string2, it returns > 0 value.
+
+#include <stdio.h>
+#include <string.h>
+#include<conio.h>
+void main( )
+{
+   char str1[ ] = "fresh" ;
+   char str2[ ] = "refresh" ;
+   int i, j, k ;
+   i = strcmp ( str1, "fresh" ) ;
+   j = strcmp ( str1, str2 ) ;
+   k = strcmp ( str1, "f" ) ;
+   printf ( "\n%d %d %d", i, j, k ) ;
+   getch();
+}
+
+Output:
+0 -1 1
+
+
+Example program for strchr:
+It returns pointer to the first occurrence of character in given string.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+void main ()
+{
+   char string[55] ="This is a string for testing";
+   char *p;
+   p = strchr (string,'i');
+   while (p!=NULL)
+   {
+      printf ("Character i found at %d\n",p-string+1);
+      p=strchr(p+1,'i');
+   }
+   getch();
+}
+
+Output:
+Character i found at 3Character i found at 6Character i found at 14Character i found at 26
+
+
+Example program for strstr:
+It returns pointer to the first occurrence of string 2 in given string1.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+void main ()
+{
+   char string[55] ="This is a string for testing";
+   char *p;
+   p = strstr (string,"for");
+   if (p)
+   {
+      printf("string found\n" );
+   }
+   else
+      printf("string not found");
+   getch();
+}
+
+Output:
+string found
+
+
+Example program for strrchr:
+It finds the last occurrence of given character in a string.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+void main ()
+{
+  char string[50] = "This is a string for testing";
+  char *p;
+  p = strrchr(string,'t');
+  printf ("The position of last occurrence of 't' is found " \
+          "at %d \n",p-string+1);
+  getch();
+}
+
+Output:
+The position of last occurrence of ‘t’ is found at 25
+
+
+Example program for strset:
+It sets all the characters in a string to given character.
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void main()
+{
+   char str[20] = "Test String";
+   printf("Original string is : %s", str);
+   printf("Test string after string set : %s",strset(str,'#'));
+   printf("After string set: %s",str);
+   getch();
+}
+
+Output:
+Original string is :      Test String
+Test string after string set : ###########
+
+
+Example program for strnset:
+It sets the portion of characters in a string to given character.
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void main()
+{
+    char str[20] = "Test String";
+    printf("Original string is : %s", str);
+    printf("Test string after string n set" \
+           " : %s", strnset(str,'#',4));
+    printf("After string n set : %s", str);
+    getch();
+}
+
+Output:
+Original string is :      Test String
+Test string after string set : #### String
+
+
+Example program for strupr:
+It converts string to uppercase.
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void main()
+{
+    char str[] = "Modify This String To Upper";
+    printf("%s\n",strupr(str));
+    getch();
+}
+
+Output:
+MODIFY THIS STRING TO UPPER
+
+
+Example program for strlwr:
+It converts string to lowercase.
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void main()
+{
+    char str[] = "MODIFY This String To LOwer";
+    printf("%s\n",strlwr (str));
+    getch();
+}
+
+Output:
+modify this string to lower
+
+
+Example program for strncat:
+It appends a portion of string to another string.
+
+#include <stdio.h>
+#include<conio.h>
+#include <string.h>
+void main ()
+{
+   char s1[30];
+   char s2[20];
+   strcpy (s1,"String1 ");
+   strcpy (s2,"String2 ");
+   strncat (s1, s2, 3);
+   printf("Result : %s", s1);
+   getch();
+}
+
+Output:
+Result : String1 Str
+
+
+Example program for strcpy and strncpy:
+It copies given number of characters of one string to another.
+
+#include <stdio.h>
+#include<conio.h>
+#include <string.h>
+void main ()
+{
+  char s1[30];
+  char s2[20];
+  strcpy (s2,"String2 ");
+  strncpy (s1, s2, 4);
+  printf("Result : %s", s1);
+  getch();
+}
+
+Output:
+Result : Stri
+
+
+Example program for strtok:
+It tokenizes the given string using delimiter. That means, It parses a given string using delimiter.
+
+#include <stdio.h>
+#include<conio.h>
+#include <string.h>
+void main ()
+{
+  char string[50] ="Test,string1,Test,string2:Test:string3";
+  char *p;
+  printf ("string  \"%s\" is split into tokens:\n",string);
+  p = strtok (string,",:");
+  while (p!= NULL)
+  {
+    printf ("%s\n",p);
+    p = strtok (NULL, ",:");
+  }
+  getch();
+}
+
+Output:
+string “Test,string1,Test,string2:Test:string3? is split into tokens:Teststring1Teststring2Teststring3
+
+
+Example program for strdup:
+It duplicates the given string.
+
+#include <stdio.h>
+#include<conio.h>
+#include <string.h>
+void main()
+{
+    char *p1 = "Raja";
+    char *p2;
+    p2 = strdup(p1);
+    printf("Duplicated string is : %s", p2);
+    getch();
+}
+
+Output:
+Duplicated string is : Raja
+
+
+Example program for strrev:
+It reverses the given string.
+
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+   char name[30] = "string";
+   printf("Enter your name to reverse\n");
+   strrev(name);
+   printf("Reversed name is : \n%s\n",name);
+   getch();
+}
+
+ Output:
+
+gnirts
+
+STRUCTURE IN C
+  C Structure is a collection of different data types which are grouped together and each element in a C structure is called member.
+If you want to access structure members in C, structure variable should be declared.
+Many structure variables can be declared for same structure and memory will be allocated for each separately.
+It is a best practice to initialize a structure to null while declaring, if we don’t assign any values to structure members.
+DIFFERENCE BETWEEN C VARIABLE, C ARRAY AND C STRUCTURE:
+
+A normal C variable can hold only one data of one data type at a time.
+An array can hold group of data of same data type.
+A structure can hold group of data of different data types
+Data types can be int, char, float, double and long double etc.
+Datatype	
+C VARIABLE
+
+C ARRAY
+
+C STRUCTURE
+
+Syntax	Example	Syntax	Example	Syntax	Example
+int	int a	a = 20	int a[3]	a[0] = 10
+a[1] = 20
+a[2] = 30
+a[3] = ‘\0'	struct student
+{
+int a;
+char b[10];
+}	a = 10
+b = “Hello”
+char	char b	b=’Z’	char b[10]	b=”Hello”
+BELOW TABLE EXPLAINS FOLLOWING CONCEPTS IN C STRUCTURE.
+
+How to declare a C structure?
+How to initialize a C structure?
+How to access the members of a C structure?
+Type	Using normal variable	Using pointer variabe
+Syntax	struct tag_name
+{
+data type var_name1;
+data type var_name2;
+data type var_name3;
+};	struct tag_name
+{
+data type var_name1;
+data type var_name2;
+data type var_name3;
+};
+Example	struct student
+{
+int  mark;
+char name[10];
+float average;
+};	struct student
+{
+int  mark;
+char name[10];
+float average;
+};
+Declaring structure variable	struct student report;	struct student *report, rep;
+Initializing structure variable	struct student report = {100, “Mani”, 99.5};	struct student rep = {100, “Mani”, 99.5};
+report = &rep;
+Accessing structure members	report.mark
+report.name
+report.average	report  -> mark
+report -> name
+report -> average
+ EXAMPLE PROGRAM FOR C STRUCTURE:
+
+           This program is used to store and access “id, name and percentage” for one student. We can also store and access these data for many students using array of structures.
+#include <stdio.h>
+#include <string.h>
+#include<conio.h>
+struct student
+{
+           int id;
+           char name[20];
+           float percentage;
+};
+ void main()
+{
+           struct student record = {0}; //Initializing to null
+           record.id=1;
+           strcpy(record.name, "Raju");
+           record.percentage = 86.5;
+           printf(" Id is: %d \n", record.id);
+           printf(" Name is: %s \n", record.name);
+           printf(" Percentage is: %f \n", record.percentage);
+           getch();
+}
+
+Output:
+Id is: 1Name is: RajuPercentage is: 86.500000
+
+Example program – Another way of declaring C structure:
+           In this program, structure variable “record” is declared while declaring structure itself. In above structure example program, structure variable “struct student record” is declared inside main function which is after declaring structure.
+
+#include <stdio.h>
+#include <string.h>
+#include<conio.h>
+struct student
+            {
+            int id;
+            char name[20];
+            float percentage;
+             } record;
+         void main()
+         {
+            record.id=1;
+            strcpy(record.name, "Raju");
+            record.percentage = 86.5;
+            printf(" Id is: %d \n", record.id);
+            printf(" Name is: %s \n", record.name);
+            printf(" Percentage is: %f \n", record.percentage);
+            getch();
+}
+
+Output:
+Id is: 1Name is: RajuPercentage is: 86.500000
+
+
+C structure declaration in separate header file:
+           In above structure programs, C structure is declared in main source file. Instead of declaring C structure in main source file, we can have this structure declaration in another file called “header file” and we can include that header file in main source file as shown below.
+
+Header file name – structure.h
+Before compiling and executing below C program, create a file named “structure.h” and declare the below structure.
+struct student{int id;char name[20];float percentage;} record;
+
+Main file name – structure.c:
+           In this program, above created header file is included in “structure.c” source file as #include “Structure.h”. So, the structure declared in “structure.h” file can be used in “structure.c” source file.
+
+// File name - structure.c
+#include <stdio.h>
+#include <string.h>
+#include "structure.h"   /* header file where C structure is
+                            declared */
+ int main()
+{
+ record.id=1;
+   strcpy(record.name, "Raju");
+   record.percentage = 86.5;
+   printf(" Id is: %d \n", record.id);
+   printf(" Name is: %s \n", record.name);
+   printf(" \tPercentage is: %f \n", record.percentage);
+   return 0;
+}
+
+Output:
+Id is: 1Name is: Raju    Percentage is: 86.500000
+
+Uses of C structures:
+
+ C Structures can be used to store huge data. Structures act as a database.
+C Structures can be used to send data to the printer.
+C Structures can interact with keyboard and mouse to store the data.
+C Structures can be used in drawing and floppy formatting.
+C Structures can be used to clear output screen contents.
+C Structures can be used to check computer’s memory size etc.
+
+
+HELLO WORD PROGRAM
+METHOD 1:
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+  printf("Hello world\n");
+  getch();
+}
+
+Method 2:
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+  char string[] = "Hello World";
+  clrscr();
+  printf("%s\n", string);
+  getch();
+}
+
+
+Method 3:
+#include <stdio.h>
+#include<conio.h>
+#define TRUE 1
+void main()
+{
+  while (TRUE)
+  {
+    printf("Hello World\n");
+  }
+ getch();
+}
+
+
+C PROGRAM PRINT INTEGER
+This c program first inputs an integer and then prints it. Input is done using scanf function and number is printed on screen using printf.
+
+C programming code
+ #include <stdio.h>
+ #include<conio.h>
+ void main()
+  {
+    int a;
+    clrscr();
+    printf("Enter an integer\n");
+    scanf("%d", &a);
+    printf("Integer that you have entered is %d\n", a);
+    getch();
+   }
+
+
+
+C PROGRAM TO ADD TWO NUMBERS
+C program to add two numbers: This c language program perform the basic arithmetic operation of addition on two numbers and then prints the sum on the screen. For example if the user entered two numbers as 5, 6 then 11 (5 + 6) will be printed on the screen.
+
+C PROGRAMMING CODE
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int a, b, c;
+   printf("Enter two numbers to add\n");
+   scanf("%d%d",&a,&b);
+   c = a + b;
+   printf("Sum of entered numbers = %d\n",c);
+   getch();
+}
+ADDITION WITHOUT USING THIRD VARIABLE
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int a = 1, b = 2;
+   /* Storing result of addition in variable a */
+    a = a + b;
+  /* Not recommended because original value of a is lost 
+   * and you may be using it somewhere in code considering it
+   * as it was entered by the user.
+   */
+   printf("Sum of a and b = %d\n", a);
+   getch();
+}
+C PROGRAM TO ADD TWO NUMBERS REPEATEDLY
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int a, b, c;
+   char ch;
+   clrscr();
+    while(1)
+   {
+      printf("Enter values of a and b\n");
+      scanf("%d%d",&a,&b);
+      c = a + b;
+      printf("a + b = %d\n", c);
+      printf("Do you wish to add more numbers(y/n)\n");
+      scanf(" %c",&ch);
+      if ( ch == 'y' || ch == 'Y' )
+         continue;
+      else
+     break;
+   }
+  getch();
+}
+ADDING NUMBERS IN C USING FUNCTION
+#include<stdio.h>
+#include<conio.h>
+long addition(long, long);
+void main()
+{
+   long first, second, sum;
+   scanf("%ld%ld", &first, &second);
+   sum = addition(first, second);
+   printf("%ld\n", sum);
+   getch();
+}
+ long addition(long a, long b)
+{
+   long result;
+   result = a + b;
+   return result;
+}
+
+We have used long data type as it can handle large numbers, if you want to add still larger numbers which doesn't fit in long range then use array, string or other data structure. 
+
+
+
+C PROGRAM TO CHECK ODD OR EVEN
+c program to check odd or even: We will determine whether a number is odd or even by using different methods all are provided with a code in c language. As you have study in mathematics that in decimal number system even numbers are divisible by 2 while odd are not so we may use modulus operator(%) which returns remainder, For example 4%3 gives 1 ( remainder when four is divided by three). Even numbers are of the form 2*p and odd are of the form (2*p+1) where p is is an integer.
+
+C program to check odd or even using modulus operator
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int n;
+   printf("Enter an integer\n");
+   scanf("%d",&n);
+   if ( n%2 == 0 )
+   printf("Even\n");
+   else
+   printf("Odd\n");
+   getch();
+}
+
+We can use bitwise AND (&) operator to check odd or even, as an example consider binary of 7 (0111) when we perform 7 & 1 the result will be one and you may observe that the least significant bit of every odd number is 1, so ( odd_number & 1 ) will be one always and also ( even_number & 1 ) is zero.
+
+C program to check odd or even using bitwise operator
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int n;
+   printf("Enter an integer\n");
+   scanf("%d",&n);
+   if ( n & 1 == 1 )
+   printf("Odd\n");
+   else
+   printf("Even\n");
+   getch();
+}
+FIND ODD OR EVEN USING CONDITIONAL OPERATOR
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int n;
+   clrscr();
+   printf("Input an integer\n");
+   scanf("%d",&n);
+   n%2 == 0 ? printf("Even\n") : printf("Odd\n");
+   getch();
+}
+
+C program to check odd or even without using bitwise or modulus operator
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+   int n;
+   printf("Enter an integer\n");
+   scanf("%d",&n);
+   if ( (n/2)*2 == n )
+   printf("Even\n");
+   else
+   printf("Odd\n");
+   getch();
+} 
+
+In c programming language when we divide two integers we get an integer result, For example the result of 7/3 will be 2.So we can take advantage of this and may use it to find whether the number is odd or even. Consider an integer n we can first divide by 2 and then multiply it by 2 if the result is the original number then the number is even otherwise the number is odd. For example 11/2 = 5, 5*2 = 10 ( which is not equal to eleven), now consider 12/2 = 6 and 6 *2 = 12 ( same as original number). These are some logic which may help you in finding if a number is odd or not. 
+
+
+C PROGRAM TO CHECK WHETHER INPUT ALPHABET IS A VOWEL OR NOT
+This code checks whether an input alphabet is a vowel or not. Both lower-case and upper-case are checked.
+
+C programming code
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+  char ch;
+  printf("Enter a character\n");
+  scanf("%c", &ch);
+  if (ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'I'   || ch =='o' || ch=='O' || ch == 'u' || ch == 'U')
+  printf("%c is a vowel.\n", ch);
+  else
+  printf("%c is not a vowel.\n", ch);
+  getch();
+}
+
+Check vowel using switch statement
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+  char ch;
+  printf("Input a character\n");
+  scanf("%c", &ch);
+  switch(ch)
+  {
+    case 'a':
+    case 'A':
+    case 'e':
+    case 'E':
+    case 'i':
+    case 'I':
+    case 'o':
+    case 'O':
+    case 'u':
+    case 'U':
+      printf("%c is a vowel.\n", ch);
+      break;
+    default:
+      printf("%c is not a vowel.\n", ch);
+  }             
+   getch();
+}
+FUNCTION TO CHECK VOWEL
+
+int check_vowel(char a)
+{
+    if (a >= 'A' && a <= 'Z')
+    a = a + 'a' - 'A';   /* Converting to lower case or use a = a + 32 */
+    if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u')
+       return 1;
+       return 0;
+}
+
+
+
+C PROGRAM TO CHECK LEAP YEAR
+C program to check leap year: c code to check leap year, year will be entered by the user.
+
+C programming code
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+  int year;
+  printf("Enter a year to check if it is a leap year\n");
+  scanf("%d", &year);
+  if ( year%400 == 0)
+    printf("%d is a leap year.\n", year);
+  else if ( year%100 == 0)
+    printf("%d is not a leap year.\n", year);
+  else if ( year%4 == 0 )
+    printf("%d is a leap year.\n", year);
+  else
+    printf("%d is not a leap year.\n", year);  
+   getch();
+}
+
+
+
+ADD DIGITS OF NUMBER IN C
+C program to add digits of a number: Here we are using modulus operator(%) to extract individual digits of number and adding them.
+
+C programming code
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+   int n, sum = 0, remainder;
+   printf("Enter an integer\n");
+   scanf("%d",&n);
+   while(n != 0)
+   {
+      remainder = n % 10;
+      sum = sum + remainder;
+      n = n / 10;
+   }
+  printf("Sum of digits of entered number = %d\n",sum);
+  getch();
+}
+FOR EXAMPLE IF THE INPUT IS 98, SUM(VARIABLE) IS 0 INITIALLY
+98%10 = 8 (% is modulus operator which gives us remainder when 98 is divided by 10).
+sum = sum + remainder
+so sum = 8 now.
+98/10 = 9 because in c whenever we divide integer by another integer we get an integer.
+9%10 = 9
+sum = 8(previous value) + 9
+sum = 17
+9/10 = 0.So finally n = 0, loop ends we get the required sum. 
+
+
+ADD DIGITS USING RECURSION
+#include <stdio.h>
+#include<conio.h>
+int add_digits(int);
+void main() 
+{
+  int n, result;
+  scanf("%d", &n);
+  result = add_digits(n);
+  printf("%d\n", result);
+  getch();
+}
+ int add_digits(int n)  
+{
+  static int sum = 0;
+   if (n == 0) {
+   return 0;
+  }
+  sum = n%10 + add_digits(n/10);
+  return sum;
+}
+
+
+C - VARIABLES
+A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.
+The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C is case-sensitive. Based on the basic types explained in previous chapter, there will be the following basic variable types:
+Type	Description
+char	Typically a single octet(one byte). This is an integer type.
+int	The most natural size of integer for the machine.
+float	A single-precision floating point value.
+double	A double-precision floating point value.
+void	Represents the absence of type.
+C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, let us study only basic variable types.
+VARIABLE DEFINITION IN C:
+A variable definition means to tell the compiler where and how much to create the storage for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows:
+type variable_list;
+Here, type must be a valid C data type including char, w_char, int, float, double, bool or any user-defined object, etc., and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here:
+int    i, j, k;
+char   c, ch;
+float  f, salary;
+double d;
+The line int i, j, k; both declares and defines the variables i, j and k; which instructs the compiler to create variables named i, j and k of type int.
+Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows:
+type variable_name = value;
+Some examples are:
+extern int d = 3, f = 5;    // declaration of d and f. 
+int d = 3, f = 5;           // definition and initializing d and f. 
+byte z = 22;                // definition and initializes z. 
+char x = 'x';               // the variable x has the value 'x'.
+For definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables is undefined.
+VARIABLE DECLARATION IN C:
+A variable declaration provides assurance to the compiler that there is one variable existing with the given type and name so that compiler proceed for further compilation without needing complete detail about the variable. A variable declaration has its meaning at the time of compilation only, compiler needs actual variable declaration at the time of linking of the program.
+A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use extern keyword to declare a variable at any place. Though you can declare a variable multiple times in your C program but it can be defined only once in a file, a function or a block of code.
+EXAMPLE
+Try following example, where variables have been declared at the top, but they have been defined and initialized inside the main function
+#include <stdio.h>
+#include<conio.h>
+// Variable declaration:
+extern int a, b;
+extern int c;
+extern float f;
+void main ()
+{
+  /* variable definition: */
+  int a, b;
+  int c;
+  float f;
+  /* actual initialization */
+  a = 10;
+  b = 20;
+  c = a + b;
+  printf("value of c : %d \n", c);
+  f = 70.0/3.0;
+  printf("value of f : %f \n", f);
+  getch();
+}
+When the above code is compiled and executed, it produces the following result:
+value of c : 30
+value of f : 23.333334
+Same concept applies on function declaration where you provide a function name at the time of its declaration and its actual definition can be given anywhere else. For example:
+// function declaration
+int func();
+void main()
+{
+    // function call
+    int i = func();
+}
+
+// function definition
+int func()
+{
+ return 0;
+}
+LVALUES AND RVALUES IN C:
+There are two kinds of expressions in C:
+lvalue : An expression that is an lvalue may appear as either the left-hand or right-hand side of an assignment.
+rvalue : An expression that is an rvalue may appear on the right- but not left-hand side of an assignment.
+Variables are lvalues and so may appear on the left-hand side of an assignment. Numeric literals are rvalues and so may not be assigned and can not appear on the left-hand side. Following is a valid statement:
+int g = 20;
+But following is not a valid statement and would generate compile-time error:
+10 = 20;
+
+
+
+
+C - CONSTANTS AND LITERALS
+The constants refer to fixed values that the program may not alter during its execution. These fixed values are also called literals.
+Constants can be of any of the basic data types like an integer constant, a floating constant, a character constant, or a string literal. There are also enumeration constants as well.
+The constants are treated just like regular variables except that their values cannot be modified after their definition.
+INTEGER LITERALS
+An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.
+An integer literal can also have a suffix that is a combination of U and L, for unsigned and long, respectively. The suffix can be uppercase or lowercase and can be in any order.
+Here are some examples of integer literals:
+212         /* Legal */
+215u        /* Legal */
+0xFeeL      /* Legal */
+078         /* Illegal: 8 is not an octal digit */
+032UU       /* Illegal: cannot repeat a suffix */
+Following are other examples of various type of Integer literals:
+85         /* decimal */
+0213       /* octal */
+0x4b       /* hexadecimal */
+30         /* int */
+30u        /* unsigned int */
+30l        /* long */
+30ul       /* unsigned long */
+FLOATING-POINT LITERALS
+A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part. You can represent floating point literals either in decimal form or exponential form.
+While representing using decimal form, you must include the decimal point, the exponent, or both and while representing using exponential form, you must include the integer part, the fractional part, or both. The signed exponent is introduced by e or E.
+Here are some examples of floating-point literals:
+3.14159       /* Legal */
+314159E-5L    /* Legal */
+510E          /* Illegal: incomplete exponent */
+210f          /* Illegal: no decimal or exponent */
+.e55          /* Illegal: missing integer or fraction */
+CHARACTER CONSTANTS
+Character literals are enclosed in single quotes, e.g., 'x' and can be stored in a simple variable of chartype.
+A character literal can be a plain character (e.g., 'x'), an escape sequence (e.g., '\t'), or a universal character (e.g., '\u02C0').
+There are certain characters in C when they are preceded by a backslash they will have special meaning and they are used to represent like newline (\n) or tab (\t). Here, you have a list of some of such escape sequence codes:
+Escape sequence	Meaning
+\\	\ character
+\'	' character
+\"	" character
+\?	? character
+\a	Alert or bell
+\b	Backspace
+\f	Form feed
+\n	Newline
+\r	Carriage return
+\t	Horizontal tab
+\v	Vertical tab
+\ooo	Octal number of one to three digits
+\xhh . . .	Hexadecimal number of one or more digits
+Following is the example to show few escape sequence characters:
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+   printf("Hello\tWorld\n\n");
+   getch();
+}
+When the above code is compiled and executed, it produces the following result:
+Hello   World
+
+STRING LITERALS
+String literals or constants are enclosed in double quotes "". A string contains characters that are similar to character literals: plain characters, escape sequences, and universal characters.
+You can break a long line into multiple lines using string literals and separating them using whitespaces.
+Here are some examples of string literals. All the three forms are identical strings.
+"Welcome to C Tutorial"
+
+"C Tutorial, \
+
+Blog"
+
+"hello, " "d" "ear"
+DEFINING CONSTANTS
+There are two simple ways in C to define constants:
+Using #define preprocessor.
+Using const keyword.
+THE #DEFINE PREPROCESSOR
+Following is the form to use #define preprocessor to define a constant:
+#define identifier value
+Following example explains it in detail:
+#include <stdio.h>
+#include<conio.h>
+#define LENGTH 10   
+#define WIDTH  5
+void main()
+{
+ int area;  
+ area = LENGTH * WIDTH;
+ printf("value of area : %d", area);
+ getch();
+}
+When the above code is compiled and executed, it produces the following result:
+value of area : 50
+THE CONST KEYWORD
+You can use const prefix to declare constants with a specific type as follows:
+const type variable = value;
+Following example explains it in detail:
+#include <stdio.h>
+#include<conio.h>
+void main()
+{
+   const int  LENGTH = 10;
+   const int  WIDTH  = 5;
+   int area;  
+   area = LENGTH * WIDTH;
+   printf("value of area : %d", area);
+   getch();
+}
+When the above code is compiled and executed, it produces the following result:
+value of area : 50
+Note that it is a good programming practice to define constants in CAPITALS.
+
+
+
+C - OPERATORS
+An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C language is rich in built-in operators and provides the following types of operators:
+Arithmetic Operators
+Relational Operators
+Logical Operators
+Bitwise Operators
+Assignment Operators
+Misc Operators
+This tutorial will explain the arithmetic, relational, logical, bitwise, assignment and other operators one by one.
+ARITHMETIC OPERATORS
+Following table shows all the arithmetic operators supported by C language. Assume variable A holds 10 and variable B holds 20 then:
+Operator	Description	Example
++	Adds two operands	A + B will give 30
+-	Subtracts second operand from the first	A - B will give -10
+*	Multiplies both operands	A * B will give 200
+/	Divides numerator by de-numerator	B / A will give 2
+%	Modulus Operator and remainder of after an integer division	B % A will give 0
+++	Increments operator increases integer value by one	A++ will give 11
+--	Decrements operator decreases integer value by one	A-- will give 9
+RELATIONAL OPERATORS
+Following table shows all the relational operators supported by C language. Assume variable A holds 10 and variable B holds 20, then:
+Operator	Description	Example
+==	Checks if the values of two operands are equal or not, if yes then condition becomes true.	(A == B) is not true.
+!=	Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.	(A != B) is true.
+>	Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.	(A > B) is not true.
+<	Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.	(A < B) is true.
+>=	Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.	(A >= B) is not true.
+<=	Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.	(A <= B) is true.
+LOGICAL OPERATORS
+Following table shows all the logical operators supported by C language. Assume variable A holds 1 and variable B holds 0, then:
+Operator	Description	Example
+&&	Called Logical AND operator. If both the operands are non-zero, then condition becomes true.	(A && B) is false.
+||	Called Logical OR Operator. If any of the two operands is non-zero, then condition becomes true.	(A || B) is true.
+!	Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true then Logical NOT operator will make false.	!(A && B) is true.
+BITWISE OPERATORS
+Bitwise operator works on bits and perform bit-by-bit operation. The truth tables for &, |, and ^ are as follows:
+p	q	p & q	p | q	p ^ q
+0	0	0	0	0
+0	1	0	1	1
+1	1	1	1	0
+1	0	0	1	1
+Assume if A = 60; and B = 13; now in binary format they will be as follows:
+A = 0011 1100
+B = 0000 1101
+-----------------
+A&B = 0000 1100
+A|B = 0011 1101
+A^B = 0011 0001
+~A  = 1100 0011
+The Bitwise operators supported by C language are listed in the following table. Assume variable A holds 60 and variable B holds 13, then:
+Operator	Description	Example
+&	Binary AND Operator copies a bit to the result if it exists in both operands.	(A & B) will give 12, which is 0000 1100
+|	Binary OR Operator copies a bit if it exists in either operand.	(A | B) will give 61, which is 0011 1101
+^	Binary XOR Operator copies the bit if it is set in one operand but not both.	(A ^ B) will give 49, which is 0011 0001
+~	Binary Ones Complement Operator is unary and has the effect of 'flipping' bits.	(~A ) will give -61, which is 1100 0011 in 2's complement form.
+<<	Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand.	A << 2 will give 240 which is 1111 0000
+>>	Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.	A >> 2 will give 15 which is 0000 1111
+ASSIGNMENT OPERATORS
+There are following assignment operators supported by C language:
+Operator	Description	Example
+=	Simple assignment operator, Assigns values from right side operands to left side operand	C = A + B will assign value of A + B into C
++=	Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand	C += A is equivalent to C = C + A
+-=	Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand	C -= A is equivalent to C = C - A
+*=	Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand	C *= A is equivalent to C = C * A
+/=	Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand	C /= A is equivalent to C = C / A
+%=	Modulus AND assignment operator, It takes modulus using two operands and assign the result to left operand	C %= A is equivalent to C = C % A
+<<=	Left shift AND assignment operator	C <<= 2 is same as C = C << 2
+>>=	Right shift AND assignment operator	C >>= 2 is same as C = C >> 2
+&=	Bitwise AND assignment operator	C &= 2 is same as C = C & 2
+^=	bitwise exclusive OR and assignment operator	C ^= 2 is same as C = C ^ 2
+|=	bitwise inclusive OR and assignment operator	C |= 2 is same as C = C | 2
+MISC OPERATORS ? SIZEOF & TERNARY
+There are few other important operators including sizeof and ? : supported by C Language.
+Operator	Description	Example
+sizeof()	Returns the size of an variable.	sizeof(a), where a is integer, will return 4.
+&	Returns the address of an variable.	&a; will give actual address of the variable.
+*	Pointer to a variable.	*a; will pointer to a variable.
+? :	Conditional Expression	If Condition is true ? Then value X : Otherwise value Y
+OPERATORS PRECEDENCE IN C
+Operator precedence determines the grouping of terms in an expression. This affects how an expression is evaluated. Certain operators have higher precedence than others; for example, the multiplication operator has higher precedence than the addition operator.
+For example x = 7 + 3 * 2; here, x is assigned 13, not 20 because operator * has higher precedence than +, so it first gets multiplied with 3*2 and then adds into 7.
+Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.
+Category 	Operator 	Associativity 
+Postfix 	() [] -> . ++ - -  	Left to right 
+Unary 	+ - ! ~ ++ - - (type)* & sizeof 	Right to left 
+Multiplicative  	* / % 	Left to right 
+Additive  	+ - 	Left to right 
+Shift  	<< >> 	Left to right 
+Relational  	< <= > >= 	Left to right 
+Equality  	== != 	Left to right 
+Bitwise AND 	& 	Left to right 
+Bitwise XOR 	^ 	Left to right 
+Bitwise OR 	| 	Left to right 
+Logical AND 	&& 	Left to right 
+Logical OR 	|| 	Left to right 
+Conditional 	?: 	Right to left 
+Assignment 	= += -= *= /= %=>>= <<= &= ^= |= 	Right to left 
+Comma 	, 	Left to right
+
+
+
+FUNCTION
+A function is a group of statements that together perform a task. Every C program has at least one function, which is main(), and all the most trivial programs can define additional functions.
+You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually is so each function performs a specific task.
+A function declaration tells the compiler about a function's name, return type, and parameters. A function definition provides the actual body of the function.
+The C standard library provides numerous built-in functions that your program can call. For example, function strcat() to concatenate two strings, function memcpy() to copy one memory location to another location and many more functions.
+A function is known with various names like a method or a sub-routine or a procedure, etc.
+DEFINING A FUNCTION:
+The general form of a function definition in C programming language is as follows:
+return_type function_name( parameter list )
+{
+   body of the function
+}
+A function definition in C programming language consists of a function header and a function body. Here are all the parts of a function:
+Return Type: A function may return a value. The return_type is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword void.
+Function Name: This is the actual name of the function. The function name and the parameter list together constitute the function signature.
+Parameters: A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.
+Function Body: The function body contains a collection of statements that define what the function does.
+EXAMPLE:
+Following is the source code for a function called max(). This function takes two parameters num1 and num2 and returns the maximum between the two:
+/* function returning the max between two numbers */
+int max(int num1, int num2) 
+{
+   /* local variable declaration */
+   int result;
+   if (num1 > num2)
+      result = num1;
+   else
+      result = num2;
+   return result; 
+}
+FUNCTION DECLARATIONS:
+A function declaration tells the compiler about a function name and how to call the function. The actual body of the function can be defined separately.
+A function declaration has the following parts:
+return_type function_name( parameter list );
+For the above defined function max(), following is the function declaration:
+int max(int num1, int num2);
+Parameter names are not important in function declaration only their type is required, so following is also valid declaration:
+int max(int, int);
+Function declaration is required when you define a function in one source file and you call that function in another file. In such case you should declare the function at the top of the file calling the function.
+CALLING A FUNCTION:
+While creating a C function, you give a definition of what the function has to do. To use a function, you will have to call that function to perform the defined task.
+When a program calls a function, program control is transferred to the called function. A called function performs defined task and when its return statement is executed or when its function-ending closing brace is reached, it returns program control back to the main program.
+To call a function, you simply need to pass the required parameters along with function name, and if function returns a value, then you can store returned value. For example:
+#include <stdio.h>
+#include<conio.h> 
+/* function declaration */
+int max(int num1, int num2);
+void main ()
+{
+ /* local variable definition */
+   int a = 100;
+   int b = 200;
+   int ret;
+ /* calling a function to get max value */
+   ret = max(a, b);
+   printf( "Max value is : %d\n", ret );
+   getch();
+}
+ 
+/* function returning the max between two numbers */
+int max(int num1, int num2) 
+{
+   /* local variable declaration */
+   int result;
+   if (num1 > num2)
+      result = num1;
+   else
+      result = num2;
+   return result; 
+}
+I kept max() function along with main() function and compiled the source code. While running final executable, it would produce the following result:
+Max value is : 200
+FUNCTION ARGUMENTS:
+If a function is to use arguments, it must declare variables that accept the values of the arguments. These variables are called the formal parameters of the function.
+The formal parameters behave like other local variables inside the function and are created upon entry into the function and destroyed upon exit.
+While calling a function, there are two ways that arguments can be passed to a function:
+Call Type	Description
+Call by value	This method copies the actual value of an argument into the formal parameter of the function. In this case, changes made to the parameter inside the function have no effect on the argument.
+Call by reference	This method copies the address of an argument into the formal parameter. Inside the function, the address is used to access the actual argument used in the call. This means that changes made to the parameter affect the argument.
+By default, C uses call by value to pass arguments. In general, this means that code within a function cannot alter the arguments used to call the function and above mentioned example while calling max() function used the same method.
+
+
+
+POINTER
+C Pointer is used to allocate memory dynamically i.e. at run time.
+C Pointer is a variable that stores the address of another variable.
+The variable might be any of the data type such as int, float, char, double, short etc.
+Syntax : data_type *var_name;Example : int *p;  char *p;
+Where, * is used to denote that “p” is pointer variable and not a normal variable.
+Key points to remember about pointers in C:
+Normal variable stores the value whereas pointer variable stores the address of the variable.
+The content of the C pointer always be a whole number i.e. address.
+Always C pointer is initialized to null, i.e. int *p = null.
+The value of null pointer is 0.
+& symbol is used to get the address of the variable.
+* symbol is used to get the value of the variable that a pointer is pointing to.
+If pointer is assigned to NULL, it means it is pointing to nothing.
+Two pointers can be subtracted to know how many elements are available between these two pointers.
+But, Pointer addition, multiplication, division are not allowed.
+The size of any pointer is 2 byte (for 16 bit compiler).
+Example program for pointer in C:
+
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int *ptr, q;
+    q = 50;  
+    /* address of q is assigned to ptr  */
+    ptr = &q;    
+    /* display q's value using ptr variable */      
+    printf("%d", *ptr);
+    getch();
+}
+Output:
+50
+
+
+KEYWORD
+C keeps a small set of keywords for its own use. These keywords cannot be used as identifiers in the program — a common restriction with modern languages. Where users of Old C may be surprised is in the introduction of some new keywords; if those names were used as identifiers in previous programs, then the programs will have to be changed. It will be easy to spot, because it will provoke your compiler into telling you about invalid names for things. Here is the list of keywords used in Standard C; you will notice that none of them use upper-case letters.
+
+
+
+auto	double	  int	  struct
+break	else	  long	  switch
+case	enum    	  register	  typedef
+char	extern	  return	  union
+const	float	  short	  unsigned
+continue	for	  signed	  void
+default	goto	  sizeof	  volatile
+do	if	  static	  while
+
+The new keywords that are likely to surprise old programmers are: const, signed, void and volatile (although void has been around for a while). Eagle eyed readers may have noticed that some implementations of C used to use the keywords entry, asm, and fortran. These are not part of the Standard, and few will mourn them.
+
+
+FACTORIAL PROGRAM IN C
+Factorial program in c: c code to find and print factorial of a number, three methods are given, first one uses for loop, second uses a function to find factorial and third using recursion. Factorial is represented using '!', so five factorial will be written as (5!), n factorial as (n!). Also
+n! = n*(n-1)*(n-2)*(n-3)...3.2.1 and zero factorial is defined as one i.e. 0! = 1.
+FACTORIAL PROGRAM IN C USING FOR LOOP
+#include <stdio.h>
+#includde<conio.h>
+void main()
+{
+  int c, n, fact = 1;
+  printf("Enter a number to calculate it's factorial\n");
+  scanf("%d", &n);
+  for (c = 1; c <= n; c++)
+  fact = fact * c;
+  printf("Factorial of %d = %d\n", n, fact);
+  getch();
+}
+---------------------------------------------------------------------------------------------
+FACTORIAL PROGRAM IN C USING FUNCTION
+
+#include <stdio.h>
+#include<conio.h>
+long factorial(int);
+void main()
+{
+  int number;
+  long fact = 1;
+  printf("Enter a number to calculate it's factorial\n");
+  scanf("%d", &number);
+  printf("%d! = %ld\n", number, factorial(number));
+  getch();
+}
+ long factorial(int n)
+{
+  int c;
+  long result = 1;
+  for (c = 1; c <= n; c++)
+  result = result * c;
+  return result;
+}
+---------------------------------------------------------------------------------------------------------------------------------
+FACTORIAL PROGRAM IN C USING RECURSION
+#include<stdio.h>
+#include<conio.h>
+long factorial(int);
+void main()
+{
+  int n;
+  long f;
+  printf("Enter an integer to find factorial\n");
+  scanf("%d", &n);
+  if (n < 0)
+    printf("Negative integers are not allowed.\n");
+  else
+  {
+    f = factorial(n);
+    printf("%d! = %ld\n", n, f);
+  }
+    getch();
+}
+ long factorial(int n)
+{
+  if (n == 0)
+  return 1;
+  else
+   return(n * factorial(n-1));
+}
+------------------------------------------------------------------------------------------------------------
+Recursion is a technique in which a function calls itself, for example in above code factorial function is calling itself. To solve a problem using recursion you must first express its solution in recursive form.
+
+
+C PROGRAM TO FIND HCF AND LCM
+C program to find hcf and lcm: The code below finds highest common factor and least common multiple of two integers. HCF is also known as greatest common divisor(GCD) or greatest common factor(gcf).
+C PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+void main() 
+{
+  int a, b, x, y, t, gcd, lcm;
+  printf("Enter two integers\n");
+  scanf("%d%d", &x, &y);
+  a = x;
+  b = y;
+  while (b != 0) 
+  {
+    t = b;
+    b = a % b;
+    a = t;
+  }
+  gcd = a;
+  lcm = (x*y)/gcd;
+  printf("Greatest common divisor of %d and %d = %d\n", x, y, gcd);
+  printf("Least common multiple of %d and %d = %d\n", x, y, lcm);
+  getch();
+}
+
+C PROGRAM TO FIND HCF AND LCM USING RECURSION
+
+#include <stdio.h>
+#include<conio.h> 
+long gcd(long, long);
+void main() 
+{
+  long x, y, hcf, lcm;
+  printf("Enter two integers\n");
+  scanf("%ld%ld", &x, &y);
+  hcf = gcd(x, y);
+  lcm = (x*y)/hcf;
+  printf("Greatest common divisor of %ld and %ld = %ld\n", x, y, hcf);
+  printf("Least common multiple of %ld and %ld = %ld\n", x, y, lcm);
+  getch();
+}
+ long gcd(long a, long b) 
+{
+  if (b == 0) 
+{
+    return a;
+ }
+  else 
+{
+  return gcd(b, a % b);
+ }
+}
+C PROGRAM TO FIND HCF AND LCM USING FUNCTION
+#include <stdio.h>
+#include<conio.h> 
+long gcd(long, long);
+void main() 
+{
+  long x, y, hcf, lcm;
+  printf("Enter two integers\n");
+  scanf("%ld%ld", &x, &y);
+  hcf = gcd(x, y);
+  lcm = (x*y)/hcf;
+  printf("Greatest common divisor of %ld and %ld = %ld\n", x, y, hcf);
+  printf("Least common multiple of %ld and %ld = %ld\n", x, y, lcm);
+  getch();
+}
+ long gcd(long x, long y) 
+{
+  if (x == 0) 
+{
+    return y;
+ }
+   while (y != 0) 
+{
+   if (x > y) 
+{
+   x = x - y;
+ }
+  else 
+{
+  y = y - x;
+}
+}
+  return x;
+}
+
+
+DECIMAL TO BINARY CONVERSION
+C program to convert decimal to binary: c language code to convert an integer from decimal number system(base-10) to binary number system(base-2). Size of integer is assumed to be 32 bits. We use bitwise operators to perform the desired task. We right shift the original number by 31, 30, 29, ..., 1, 0 bits using a loop and bitwise AND the number obtained with 1(one), if the result is 1 then that bit is 1 otherwise it is 0(zero).
+C PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+  int n, c, k;
+  printf("Enter an integer in decimal number system\n");
+  scanf("%d", &n);
+  printf("%d in binary number system is:\n", n);
+  for (c = 31; c >= 0; c--)
+  {
+    k = n >> c;
+    if (k & 1)
+      printf("1");
+    else
+      printf("0");
+  }
+  printf("\n");
+  getch();
+}
+
+Above code only prints binary of integer, but we may wish to perform operations on binary so in the code below we are storing the binary in a string. We create a function which returns a pointer to string which is the binary of the number passed as argument to the function.
+C CODE TO STORE DECIMAL TO BINARY CONVERSION IN A STRING
+#include <stdio.h>
+#include <stdlib.h>
+#include<conio.h> 
+char *decimal_to_binary(int);
+void main()
+{
+   int n, c, k;
+   char *pointer;
+   printf("Enter an integer in decimal number system\n");
+   scanf("%d",&n);
+   pointer = decimal_to_binary(n);
+   printf("Binary string of %d is: %s\n", n, t);
+   free(pointer);
+   getch();
+}
+ char *decimal_to_binary(int n)
+{
+   int c, d, count;
+   char *pointer;
+   count = 0;
+   pointer = (char*)malloc(32+1);
+   if ( pointer == NULL )
+   exit(EXIT_FAILURE);
+   for ( c = 31 ; c >= 0 ; c-- )
+   {
+      d = n >> c;
+      if ( d & 1 )
+         *(pointer+count) = 1 + '0';
+      else
+         *(pointer+count) = 0 + '0';
+      count++;
+   }
+   *(pointer+count) = '\0';
+    return  pointer;
+}
+
+
+
+C PROGRAM TO FIND NCR AND NPR
+C program to find nCr and nPr: This code calculate nCr which is n!/(r!*(n-r)!) and nPr = n!/(n-r)!
+C PROGRAM TO FIND NCR USING FUNCTION
+
+#include<stdio.h>
+#include<conio.h> 
+long factorial(int);
+long find_ncr(int, int);
+long find_npr(int, int);
+void main()
+{
+   int n, r;
+   long ncr, npr;
+   clrscr();
+   printf("Enter the value of n and r\n");
+   scanf("%d%d",&n,&r);
+   ncr = find_ncr(n, r);
+   npr = find_npr(n, r);
+   printf("%dC%d = %ld\n", n, r, ncr);
+   printf("%dP%d = %ld\n", n, r, npr);
+   getch();
+}
+long find_ncr(int n, int r)
+{
+   long result;
+   result = factorial(n)/(factorial(r)*factorial(n-r));
+   return result;
+}
+long find_npr(int n, int r)
+{
+   long result;
+   result = factorial(n)/factorial(n-r);
+   return result;
+} 
+long factorial(int n)
+{
+   int c;
+   long result = 1;
+   for( c = 1 ; c <= n ; c++ )
+      result = result*c;
+   return ( result );
+}
+
+
+C PROGRAM TO FIND FREQUENCY OF CHARACTERS IN A STRING
+This program computes frequency of characters in a string i.e. which character is present how many times in a string. For example in the string "code" each of the character 'c', 'o', 'd', and 'e' has occurred one time. Only lower case alphabets are considered, other characters (uppercase and special characters) are ignored. You can easily modify this program to handle uppercase and special symbols.
+C PROGRAMMING CODE
+#include <stdio.h>
+#include <string.h>
+#include<conio.h> 
+void main()
+{
+   char string[100];
+   int c = 0, count[26] = {0};
+   printf("Enter a string\n");
+   gets(string);
+   while ( string[c] != '\0' )
+   {
+      /* Considering characters from 'a' to 'z' only */
+    if ( string[c] >= 'a' && string[c] <= 'z' ) 
+    count[string[c]-'a']++;
+    c++;
+   }
+    for ( c = 0 ; c < 26 ; c++ )
+   {
+     if( count[c] != 0 )
+     printf("%c occurs %d times in the entered string.\n",c+'a',count[c]);
+   }
+   getch();
+}
+
+Explanation of "count[string[c]-'a']++", suppose input string begins with 'a' so c is 0 initially and string[0] = 'a' and string[0]-'a' = 0 and we increment count[0] i.e. a has occurred one time and repeat this till complete string is scanned.
+
+OUTPUT OF PROGRAM:
+ENTER A STRING
+A QUICK BROWN FOX JUMP OVER THE LAZY DOGS
+A OCCURS 2 TIMES IN THE ENTERED STRING
+B OCCURS 1 TIMES IN THE ENTERED STRING
+C OCCURS 1 TIMES IN THE ENTERED STRING
+D OCCURS 1 TIMES IN THE ENTERED STRING
+E OCCURS 2 TIMES IN THE ENTERED STRING
+F OCCURS 1 TIMES IN THE ENTERED STRING
+G OCCURS 1 TIMES IN THE ENTERED STRING
+H OCCURS 1 TIMES IN THE ENTERED STRING
+I OCCURS 1 TIMES IN THE ENTERED STRING
+J OCCURS 1 TIMES IN THE ENTERED STRING
+K OCCURS 1 TIMES IN THE ENTERED STRING
+L OCCURS 1 TIMES IN THE ENTERED STRING
+M OCCURS 1 TIMES IN THE ENTERED STRING
+N OCCURS 1 TIMES IN THE ENTERED STRING
+O OCCURS 4 TIMES IN THE ENTERED STRING
+P OCCURS 1 TIMES IN THE ENTERED STRING
+Q OCCURS 1 TIMES IN THE ENTERED STRING
+R OCCURS 2 TIMES IN THE ENTERED STRING
+S OCCURS 1 TIMES IN THE ENTERED STRING
+T OCCURS 1 TIMES IN THE ENTERED STRING
+U OCCURS 2 TIMES IN THE ENTERED STRING
+V OCCURS 1 TIMES IN THE ENTERED STRING
+X OCCURS 1 TIMES IN THE ENTERED STRING
+Y OCCURS 1 TIMES IN THE ENTERED STRING
+Z OCCURS 1 TIMES IN THE ENTERED STRING
+
+C PROGRAM TO READ A FILE
+C program to read a file: This program reads a file entered by the user and displays its contents on the screen, fopen function is used to open a file it returns a pointer to structure FILE. FILE is a predefined structure in stdio.h . If the file is successfully opened then fopen returns a pointer to file and if it is unable to open a file then it returns NULL. fgetc function returns a character which is read from the file and fclose function closes the file. Opening a file means we bring file from disk to ram to perform operations on it. The file must be present in the directory in which the executable file of this code sis present.
+C PROGRAM TO OPEN A FILE
+/*C programming code to open a file and to print it contents on screen.  */
+
+#include <stdio.h>
+#include <stdlib.h>
+ void main()
+{
+   char ch, file_name[25];
+   FILE *fp;
+   printf("Enter the name of file you wish to see\n");
+   gets(file_name);
+   fp = fopen(file_name,"r"); // read mode
+   if( fp == NULL )
+   {
+      perror("Error while opening the file.\n");
+      exit(EXIT_FAILURE);
+   }
+   printf("The contents of %s file are :\n", file_name);
+   while( ( ch = fgetc(fp) ) != EOF )
+   printf("%c",ch);
+   fclose(fp);
+   getch();
+}
+
+OUTPUT OF PROGRAM:
+ENTER THE NAME OF THE FILE YOU WISH TO SEE
+COMPUTER-PROGRAMMING.TXT
+THE CONTENTS OF COMPUTER-PROGRAMMING.TXT FILE ARE:
+COMPUTER PROGRAMMING IS FUN.
+
+PROCESS RETURNED 0(0X0) EXECUTION TIME:8.697S
+PRESS ANY KEY TO CONTINUE.
+
+There are blank lines present at end of file. In our program we have opened only one file but you can open multiple files in a single program and in different modes as desired. File handling is very important when we wish to store data permanently on a storage device. All variables and data of program is lost when program exits so if that data is required later we need to use files.
+
+
+C PROGRAM TO COPY FILES
+C program to copy files: This program copies a file, firstly you will specify the file to copy and then you will enter the name of target file, You will have to mention the extension of file also. We will open the file that we wish to copy in read mode and target file in write mode.
+C PROGRAMMING CODE
+#include <stdio.h>
+#include <stdlib.h>
+#include<conio.h> 
+void main()
+{
+   char ch, source_file[20], target_file[20];
+   FILE *source, *target;
+   printf("Enter name of file to copy\n");
+   gets(source_file);
+   source = fopen(source_file, "r");
+   if( source == NULL )
+   {
+      printf("Press any key to exit...\n");
+      exit(EXIT_FAILURE);
+   }
+   printf("Enter name of target file\n");
+   gets(target_file);
+   target = fopen(target_file, "w");
+   if( target == NULL )
+   {
+      fclose(source);
+      printf("Press any key to exit...\n");
+      exit(EXIT_FAILURE);
+   }
+   while( ( ch = fgetc(source) ) != EOF )
+    fputc(ch, target);
+    printf("File copied successfully.\n");
+    fclose(source);
+    fclose(target);
+    getch();
+}
+OUTPUT OF PROGRAM:
+ENTER NAME OF FILE TO COPY
+FACTORIAL.C
+ENTER NAME OF TARGET FILE
+FACTORIAL-COPY.C
+FILE COPIED SUCCESSFULLY.
+
+C PROGRAM TO CONCATENATE STRINGS
+This program concatenates strings, for example if the first string is "c " and second string is "program" then on concatenating these two strings we get the string "c program". To concatenate two strings we use strcat function of string.h, to concatenate without using library function see another code below which uses pointers.
+C PROGRAMMING CODE
+#include <stdio.h>
+#include <string.h>
+#include<conio.h> 
+void  main()
+{
+   char a[100], b[100];
+   printf("Enter the first string\n");
+   gets(a);
+   printf("Enter the second string\n");
+   gets(b);
+   strcat(a,b);
+   printf("String obtained on concatenation is %s\n",a);
+   getch();
+}
+OUTPUT OF PROGRAM:
+ENTER THE FIRST STRING
+PROGRAMMING
+ENTER THE SECOND STRING
+SIMPLIFIED.
+STRING OBTAINED ON CONCATENATION IS PROGRAMMINGSIMPLIFIED
+
+String concatenation without strcat
+#include <stdio.h>
+#include<conio.h> 
+void concatenate_string(char*, char*);
+void main()
+{
+    char original[100], add[100];
+    printf("Enter source string\n");
+    gets(original);
+    printf("Enter string to concatenate\n");
+    gets(add);
+    concatenate_string(original, add);
+    printf("String after concatenation is \"%s\"\n", original);
+    getch();
+}
+void concatenate_string(char *original, char *add)
+{
+   while(*original)
+   original++;
+   while(*add)
+   {
+      *original = *add;
+       add++;
+       original++;
+   }
+   *original = '\0';
+}
+
+
+
+
+
+
+
+
+
+ANAGRAM IN C
+Anagram in c: c program to check whether two strings are anagrams or not, string is assumed to consist of alphabets only. Two words are said to be anagrams of each other if the letters from one word can be rearranged to form the other word. From the above definition it is clear that two strings are anagrams if all characters in both strings occur same number of times. For example "abc" and "cab" are anagram strings, here every character 'a', 'b' and 'c' occur only one time in both strings. Our algorithm tries to find how many times characters appear in the strings and then comparing their corresponding counts.
+C ANAGRAM PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+int check_anagram(char [], char []);
+int main()
+{
+   char a[100], b[100];
+   int flag;
+   printf("Enter first string\n");
+   gets(a);
+   printf("Enter second string\n");
+   gets(b);
+   flag = check_anagram(a, b);
+   if (flag == 1)
+      printf("\"%s\" and \"%s\" are anagrams.\n", a, b);
+   else
+      printf("\"%s\" and \"%s\" are not anagrams.\n", a, b);
+   getch();
+}
+int check_anagram(char a[], char b[])
+{
+   int first[26] = {0}, second[26] = {0}, c = 0;
+   while (a[c] != '\0')
+   {
+      first[a[c]-'a']++;
+      c++;
+   }
+  c = 0;
+  while (b[c] != '\0')
+   {
+      second[b[c]-'a']++;
+      c++;
+   }
+  for (c = 0; c < 26; c++)
+   {
+      if (first[c] != second[c])
+         return 0;
+   }
+   return 1;
+}
+OUTPUT OF PROGRAM:
+ENTER FIRST STRING
+CREATIVE
+ENTER SECOND STRING
+REACTIVE
+"CREATIVE" AND "REACTIVE" ARE ANAGRAMS.
+
+
+
+
+
+C PROGRAM TO PERFORM ADDITION, SUBTRACTION, MULTIPLICATION AND DIVISION
+C PROGRAMMING CODE
+
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int first, second, add, subtract, multiply;
+   float divide;
+   printf("Enter two integers\n");
+   scanf("%d%d", &first, &second);
+   add = first + second;
+   subtract = first - second;
+   multiply = first * second;
+   divide = first /second;
+   printf("Sum = %d\n",add);
+   printf("Difference = %d\n",subtract);
+   printf("Multiplication = %d\n",multiply);
+   printf("Division = %.2f\n",divide);
+   getch();
+}
+
+
+C PROGRAM TO ADD N NUMBERS
+C PROGRAMMING CODE
+
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int n, sum = 0, c, value;
+   printf("Enter the number of integers you want to add\n");
+   scanf("%d", &n);
+   printf("Enter %d integers\n",n);
+   for (c = 1; c <= n; c++)
+   {
+      scanf("%d",&value);
+      sum = sum + value;
+   }
+   printf("Sum of entered integers = %d\n",sum);
+   getch();
+}
+
+C PROGRAM TO SWAP TWO NUMBERS
+SWAPPING OF TWO NUMBERS IN C
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int x, y, temp;
+   printf("Enter the value of x and y\n");
+   scanf("%d%d", &x, &y);
+   printf("Before Swapping\nx = %d\ny = %d\n",x,y);
+   temp = x;
+   x    = y;
+   y    = temp;
+   printf("After Swapping\nx = %d\ny = %d\n",x,y);
+   getch();
+}
+
+SWAPPING OF TWO NUMBERS WITHOUT THIRD VARIABLE
+/*You can also swap two numbers without using temp or temporary or third variable. In that case c program will be as shown :-   */
+
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int a, b;
+   printf("Enter two integers to swap\n");
+   scanf("%d%d", &a, &b);
+   a = a + b;
+   b = a - b;
+   a = a - b;
+   printf("a = %d\nb = %d\n",a,b);
+   getch();
+}
+To understand above logic simply choose a as 7 and b as 9 and then do what is written in program. You can choose any other combination of numbers as well. Sometimes it's a good way to understand a program.
+SWAP TWO NUMBERS USING POINTERS
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int x, y, *a, *b, temp;
+   printf("Enter the value of x and y\n");
+   scanf("%d%d", &x, &y);
+   printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+   a = &x;
+   b = &y;
+   temp = *b;
+   *b   = *a;
+   *a   = temp;
+   printf("After Swapping\nx = %d\ny = %d\n", x, y);
+   getch();
+}
+
+SWAPPING NUMBERS USING CALL BY REFERENCE
+/*In this method we will make a function to swap numbers.*/
+#include <stdio.h>
+#include<conio.h> 
+void swap(int*, int*);
+int main()
+{
+   int x, y;
+   printf("Enter the value of x and y\n");
+   scanf("%d%d",&x,&y);
+   printf("Before Swapping\nx = %d\ny = %d\n", x, y);
+   swap(&x, &y); 
+   printf("After Swapping\nx = %d\ny = %d\n", x, y);
+   getch();
+}
+void swap(int *a, int *b)
+{
+   int temp;
+   temp = *b;
+   *b   = *a;
+   *a   = temp;   
+}
+C PROGRAMMING CODE TO SWAP USING BITWISE XOR
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+  int x, y;
+  scanf("%d%d", &x, &y);
+  printf("x = %d\ny = %d\n", x, y);
+  x = x ^ y;
+  y = x ^ y;
+  x = x ^ y;
+  printf("x = %d\ny = %d\n", x, y);
+  getch();
+}
+
+Swapping is used in sorting algorithms that is when we wish to arrange numbers in a particular order either in ascending order or in descending.
+
+
+C PROGRAM TO REVERSE A NUMBER
+C Program to reverse a number :- This program reverse the number entered by the user and then prints the reversed number on the screen. For example if user enter 123 as input then 321 is printed as output. In our program we use modulus(%) operator to obtain the digits of a number. To invert number look at it and write it from opposite direction or the output of code is a number obtained by writing original number from right to left. To reverse or invert large numbers use long data type or long long data type if your compiler supports it, if you still have large numbers then use strings or other data structure.
+
+
+C PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int n, reverse = 0;
+   printf("Enter a number to reverse\n");
+   scanf("%d",&n);
+   while (n != 0)
+   {
+      reverse = reverse * 10;
+      reverse = reverse + n%10;
+      n = n/10;
+   }
+   printf("Reverse of entered number is = %d\n", reverse);
+   getch();
+}
+
+
+PALINDROME NUMBERS
+PALINDROME NUMBER ALGORITHM
+1. Get the number from user.
+2. Reverse it.
+3. Compare it with the number entered by the user.
+4. If both are same then print palindrome number
+5. Else print not a palindrome number.
+
+PALINDROME NUMBER PROGRAM C
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int n, reverse = 0, temp;
+   clrscr();
+   printf("Enter a number to check if it is a palindrome or not\n");
+   scanf("%d",&n);
+   temp = n;
+   while( temp != 0 )
+   {
+      reverse = reverse * 10;
+      reverse = reverse + temp%10;
+      temp = temp/10;
+   }
+   if ( n == reverse )
+      printf("%d is a palindrome number.\n", n);
+   else
+      printf("%d is not a palindrome number.\n", n);
+   getch();
+}
+
+
+C PROGRAM TO PRINT PATTERNS OF NUMBERS AND STARS
+These program prints various different patterns of numbers and stars. These codes illustrate how to create various patterns using c programming. Most of these c programs involve usage of nested loops and space. A pattern of numbers, star or characters is a way of arranging these in some logical manner or they may form a sequence. Some of these patterns are triangles which have special importance in mathematics. Some patterns are symmetrical while other are not. Please see the complete page and look at comments for many different patterns.
+PATTERN 1:
+    *
+   *** 
+  *****
+ *******
+*********
+We have shown five rows above, in the program you will be asked to enter the numbers of rows you want to print in the pyramid of stars.
+C PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int row, c, n, temp;
+   clrscr();
+   printf("Enter the number of rows in pyramid of stars you wish to see ");
+   scanf("%d",&n);
+   temp = n;
+   for ( row = 1 ; row <= n ; row++ )
+   {
+      for ( c = 1 ; c < temp ; c++ )
+      printf(" ");
+      temp--;
+      for ( c = 1 ; c <= 2*row - 1 ; c++ )
+      printf("*");
+      printf("\n");
+   }
+   getch();
+}
+
+PATTERN 2 :
+*
+**
+***
+****
+*****
+C PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+    int n, c, k;
+    clrscr();
+    printf("Enter number of rows\n");
+    scanf("%d",&n);
+    for ( c = 1 ; c <= n ; c++ )
+    {
+        for( k = 1 ; k <= c ; k++ )
+        printf("*");
+        printf("\n");
+    }
+   getch();
+}
+
+PATTERN 3:
+1
+2 4
+3 6 9
+4 8 12 16
+5 10 15 20 25
+6 12 18 24 30 36
+7 14 21 28 35 42 49
+8 16 24 32 40 48 56 64
+9 18 27 36 45 54 63 72 81
+10 20 30 40 50 60 70 80 90 100
+
+C programming code
+#include<stdio.h>
+#include<conio.h>
+void main()
+void main()
+{
+  int i,j;
+  for(i=1;i<=10;i++)
+  {
+      for(j=1;j<=i;j++)
+      {
+          printf("%d ",i*j);
+      }
+      printf("\n");
+  }
+  getch();
+}
+
+
+C PROGRAM TO PRINT DIAMOND PATTERN
+C programming code
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+  int n, c, k, space = 1;
+  printf("Enter number of rows\n");
+  scanf("%d", &n);
+  space = n - 1;
+  for (k = 1; k <= n; k++)
+  {
+    for (c = 1; c <= space; c++)
+    printf(" ");
+    space--;
+    for (c = 1; c <= 2*k-1; c++)
+    printf("*");
+    printf("\n");
+  }
+ space = 1;
+ for (k = 1; k <= n - 1; k++)
+ {
+   for (c = 1; c <= space; c++)
+   printf(" ");
+   space++;
+   for (c = 1 ; c <= 2*(n-k)-1; c++)
+   printf("*");
+   printf("\n");
+  }
+ getch();
+}
+Output of the Program:
+
+
+
+
+
+
+
+
+
+
+
+C PROGRAM FOR PRIME NUMBER
+PRIME NUMBER PROGRAM IN C LANGUAGE
+#include<stdio.h>
+#include<conio.h> 
+void main()
+{
+   int n, i = 3, count, c;
+   printf("Enter the number of prime numbers required\n");
+   scanf("%d",&n);
+   if ( n >= 1 )
+   {
+      printf("First %d prime numbers are :\n",n);
+      printf("2\n");
+   }
+   for ( count = 2 ; count <= n ;  )
+   {
+      for ( c = 2 ; c <= i - 1 ; c++ )
+      {
+         if ( i%c == 0 )
+         break;
+      }
+      if ( c == i )
+      {
+        printf("%d\n",i);
+        count++;
+      }
+     i++;
+  }
+ getch();
+}
+C PROGRAM FOR CHECK NUMBER IS PRIME NUMBER OR NOT
+#include<stdio.h>
+#include<conio.h> 
+void main()
+{
+   int n, c = 2;
+   printf("Enter a number to check if it is prime\n");
+   scanf("%d",&n);
+   for ( c = 2 ; c <= n - 1 ; c++ )
+   {
+      if ( n%c == 0 )
+      {
+         printf("%d is not prime.\n", n);
+  break;
+      }
+   }
+   if ( c == n )
+   printf("%d is prime.\n", n);
+   getch();
+}
+C PROGRAM FOR PRIME NUMBER USING FUNCTION
+#include<stdio.h>
+#include<conio.h> 
+int check_prime(int);
+void main()
+{
+   int n, result;
+   printf("Enter an integer to check whether it is prime or not.\n");
+   scanf("%d",&n);
+   result = check_prime(n);
+   if ( result == 1 )
+      printf("%d is prime.\n", n);
+   else
+      printf("%d is not prime.\n", n);
+   getch();
+}
+int check_prime(int a)
+{
+   int x;
+   for ( x = 2;x <= a - 1; x++ )
+   { 
+      if ( a%x == 0 )
+      return 0;
+   }
+     if ( x == a )
+     return 1;
+}
+
+
+

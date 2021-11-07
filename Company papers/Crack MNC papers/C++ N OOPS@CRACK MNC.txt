@@ -1,0 +1,333 @@
+C++ APTITUDE AND OOPS CONCEPT
+NOTE :  
+All the programs are tested under Turbo C++ 3.0, 4.5 and Microsoft VC++ 6.0 compilers. 
+It is assumed that,
+
+Programs run under Windows environment,
+The underlying machine is an x86 based system,
+Program is compiled using Turbo C/C++ compiler.
+The program output may depend on the information based on this assumptions (for example sizeof(int) == 2 may be assumed). 
+
+
+1) 
+class Sample
+{
+public:
+        int *ptr;
+        Sample(int i)
+        {
+        ptr = new int(i);
+        }
+        ~Sample()
+        {
+        delete ptr;
+        }
+        void PrintVal()
+        {
+        cout << "The value is " << *ptr;
+        }
+};
+void SomeFunc(Sample x)
+{
+cout << "Say i am in someFunc " << endl;
+}
+int main()
+{
+Sample s1= 10;
+SomeFunc(s1);
+s1.PrintVal();
+}
+Answer:
+Say i am in someFunc 
+Null pointer assignment(Run-time error)
+Explanation:
+As the object is passed by value to SomeFunc  the destructor of the object is called when the control returns from the function. So when PrintVal is called it meets up with ptr  that has been freed.The solution is to pass the Sample object  by reference to SomeFunc:
+void SomeFunc(Sample &x)
+{
+cout << "Say i am in someFunc " << endl;
+}
+because when we pass objects by refernece that object is not destroyed. while returning from the function.
+
+2) 
+Which is the parameter that is added to every non-static member function when it is called?
+Answer:
+‘this’ pointer
+
+3) 
+class base
+{
+  public:
+  int bval;
+  base(){ bval=0;}
+ };
+class deri:public base
+ {
+   public:
+   int dval;
+   deri()
+    { 
+     dval=1;
+   }
+};
+void SomeFunc(base *arr,int size)
+{
+for(int i=0; i<size; i++,arr++)
+cout<<arr->bval;
+cout<<endl;
+}
+int main()
+{
+base BaseArr[5];
+SomeFunc(BaseArr,5);
+deri DeriArr[5];
+SomeFunc(DeriArr,5);
+}
+Answer:
+ 00000
+ 01010
+Explanation:  
+The function SomeFunc expects two arguments.The first one is a pointer to an array of base class objects and the second one is the sizeof the array.The first call of someFunc calls it with an array of bae objects, so it works correctly and prints the bval of all the objects. When Somefunc is called the second time the argument passed is the pointeer to an array of derived class objects and not the array of base class objects. But that is what the function expects to be sent. So the derived class pointer is promoted to base class pointer and the address is sent to the function. SomeFunc() knows nothing about this and just treats the pointer as an array of base class objects. So when arr++ is met, the size of base class object is taken into consideration and is incremented by sizeof(int) bytes for bval (the deri class objects have bval and dval as members and so is of size >= sizeof(int)+sizeof(int) ). 
+
+4) 
+class base
+{
+public:
+void baseFun(){ cout<<"from base"<<endl;}
+};
+class deri:public base
+{
+public:
+void baseFun(){ cout<< "from derived"<<endl;}
+};
+void SomeFunc(base *baseObj)
+{
+ baseObj->baseFun();
+}
+int main()
+{
+base baseObject;
+SomeFunc(&baseObject);
+deri deriObject;
+SomeFunc(&deriObject);
+}
+Answer:
+from base
+from base
+Explanation:
+As we have seen in the previous case, SomeFunc expects a pointer to a base class. Since a pointer to a derived class object is passed, it treats the argument only as a base class pointer and the corresponding base function is called. 
+
+5) 
+class base
+{
+ public:
+ virtual void baseFun(){ cout<<"from base"<<endl;}
+};
+ class deri:public base
+{
+ public:
+ void baseFun(){ cout<< "from derived"<<endl;}
+};
+void SomeFunc(base *baseObj)
+{
+ baseObj->baseFun();
+}
+int main()
+{
+base baseObject;
+SomeFunc(&baseObject);
+deri deriObject;
+SomeFunc(&deriObject);
+}
+Answer:
+from base
+from derived 
+Explanation:
+Remember that baseFunc is a virtual function. That means that it supports run-time polymorphism. So the function corresponding to the derived class object is called. 
+ 
+6).
+void main()
+{
+int a, *pa, &ra;
+pa = &a;
+ra = a;
+cout <<"a="<<a <<"*pa="<<*pa <<"ra"<<ra ;
+}
+Answer : 
+Compiler Error: 'ra',reference must be initialized
+Explanation : 
+Pointers are different from references. One of the main differences is that the pointers can be both initialized and assigned,whereas references can only be initialized. So this code issues an error.
+
+7).
+const int size = 5;
+void print(int *ptr)
+{
+cout<<ptr[0];
+}
+void print(int ptr[size])
+{
+cout<<ptr[0];
+}
+void main()
+{
+int a[size] = {1,2,3,4,5};
+int *b = new int(size);
+print(a);
+print(b);
+}
+Answer:
+Compiler Error : function 'void print(int *)' already has a body
+Explanation:
+Arrays cannot be passed to functions, only pointers (for arrays, base addresses) can be passed. So the arguments int *ptr and int prt[size] have no difference  as function arguments. In other words, both the functoins have the same signature and so cannot be overloaded. 
+
+9).
+class some
+{
+public:
+~some()
+{
+cout<<"some's destructor"<<endl;
+}
+};
+void main()
+{
+some s;
+s.~some();
+}
+Answer:
+some's destructor
+some's destructor
+Explanation:
+Destructors can be called explicitly. Here 's.~some()' explicitly calls the destructor of 's'. When main() returns, destructor of s is called again,hence the result.
+
+11).
+#include <iostream.h>
+class fig2d
+{
+int dim1;
+int dim2;
+public:
+fig2d() { dim1=5; dim2=6;}
+virtual void operator<<(ostream & rhs);
+};
+void fig2d::operator<<(ostream &rhs)
+{
+rhs <<this->dim1<<" "<<this->dim2<<" ";
+}
+/*class fig3d : public fig2d
+{
+int dim3;
+public:
+fig3d() { dim3=7;}
+virtual void operator<<(ostream &rhs);
+};
+void fig3d::operator<<(ostream &rhs)
+{
+fig2d::operator <<(rhs);
+rhs<<this->dim3;
+}
+*/
+void main()
+{
+fig2d obj1;
+//fig3d obj2;
+obj1 << cout;
+//obj2 << cout;
+}
+Answer : 
+5 6 
+Explanation:
+In this program, the << operator is overloaded with ostream as argument. This enables the 'cout' to be present at the right-hand-side. Normally, 'cout' is implemented as global function, but it doesn't mean that 'cout' is not possible to be overloaded as member function.
+Overloading << as virtual member function becomes handy when the class in which it is overloaded is inherited, and this becomes available to be overrided. This is as opposed to global friend functions, where friend's are not inherited.
+
+12).
+class opOverload
+{
+public:
+bool operator==(opOverload temp);
+};
+bool opOverload::operator==(opOverload temp)
+{
+if(*this  == temp )
+{
+cout<<"The both are same objects\n";
+return true;
+}
+else
+{
+cout<<"The both are different\n";
+return false;
+}
+}
+void main()
+{
+opOverload a1, a2;
+a1= =a2;
+}
+Answer : 
+Runtime Error: Stack Overflow
+Explanation :
+Just like normal functions, operator functions can be called recursively. This program just illustrates that point, by calling the operator == function recursively, leading to an infinite loop. 
+
+13).
+class complex
+{
+double re;
+double im;
+public:
+complex() : re(1),im(0.5) {}
+bool operator==(complex &rhs);
+operator int(){}
+};
+bool complex::operator == (complex &rhs){
+if((this->re == rhs.re) && (this->im == rhs.im))
+return true;
+else
+return false;
+}
+int main()
+{
+complex  c1;
+cout<<  c1;
+}
+Answer : 
+Garbage value
+Explanation:
+The programmer wishes to print the complex object using output
+re-direction operator,which he has not defined for his lass.But the compiler instead of giving an error sees the conversion function and converts the user defined object to standard object and prints some garbage value.
+
+14).
+class complex
+{
+double re;
+double im;
+public:
+complex() : re(0),im(0) {}
+complex(double n) { re=n,im=n;};
+complex(int m,int n) { re=m,im=n;}
+void print() { cout<<re; cout<<im;} 
+};
+void main()
+{
+complex c3;
+double i=5;
+c3 = i;
+c3.print();
+}
+Answer: 
+5,5 
+Explanation:
+Though no operator= function taking complex, double is defined, the double on the rhs is converted into a temporary object using the single argument constructor taking double and assigned to the lvalue.
+
+15).
+void main()
+{
+int a, *pa, &ra;
+pa = &a;
+ra = a;
+cout <<"a="<<a <<"*pa="<<*pa <<"ra"<<ra ;
+}
+Answer : 
+Compiler Error: 'ra',reference must be initialized
+Explanation : 
+Pointers are different from references. One of the main differences is that the pointers can be both initialized and assigned,whereas references can only be initialized. So this code issues an error.
+

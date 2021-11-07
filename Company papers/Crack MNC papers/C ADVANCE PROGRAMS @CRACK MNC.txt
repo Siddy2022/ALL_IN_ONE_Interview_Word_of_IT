@@ -1,0 +1,407 @@
+C PROGRAM TO SHUTDOWN OR TURN OFF COMPUTER
+C Program to shutdown your computer: This program turn off i.e shutdown your computer system. Firstly it will asks you to shutdown your computer if you press 'y' the your computer will shutdown in 30 seconds, system function of "stdlib.h" is used to run an executable file shutdown.exe which is present in C:\WINDOWS\system32 in Windows XP. You can use various options while executing shutdown.exe for example -s option shutdown the computer after 30 seconds, if you wish to shutdown immediately then you can write "shutdown -s -t 0" as an argument to system function. If you wish to restart your computer then you can write "shutdown -r".
+
+If you are using Turbo C Compiler then execute your file from folder. Press F9 to build your executable file from source program. When you run from within the compiler by pressing Ctrl+F9 it may not work.
+C PROGRAMMING CODE FOR WINDOWS XP
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+   char ch;
+   printf("Do you want to shutdown your computer now (y/n)\n");
+   scanf("%c",&ch);
+    if (ch == 'y' || ch == 'Y')
+      system("C:\\WINDOWS\\System32\\shutdown -s");
+     return 0;
+}
+C PROGRAMMING CODE FOR WINDOWS 7
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+   char ch;
+   printf("Do you want to shutdown your computer now (y/n)\n");
+   scanf("%c",&ch);
+    if (ch == 'y' || ch == 'Y')
+      system("C:\\WINDOWS\\System32\\shutdown /s");
+    return 0;
+}
+To shutdown immediately use "C:\\WINDOWS\\System32\\ shutdown /s /t 0". To restart use /r instead of /s.
+C PROGRAMMING CODE FOR UBUNTU LINUX
+#include <stdio.h>
+int main() 
+{
+  system("shutdown -P now");
+  return 0;
+} 
+
+will get the message shutdown: Need to be root, now specifies that you want to shutdown immediately. '-P' option specifies you want to power off your machine. You can specify minutes as:
+shutdown -P "number of minutes"
+For more help or options type at terminal: man shutdown.
+
+
+
+C PROGRAM TO GET IP ADDRESS
+This c program prints ip (internet protocol) address of your computer, system function is used to execute the command ipconfig which prints ip address, subnet mask and default gateway. The code given below works for Windows xp and Windows 7. If you are using turbo c compiler then execute program from folder, it may not work when you are working in compiler and press Ctrl+F9 to run your program.
+C PROGRAMMING CODE
+#include<stdlib.h>
+void main()
+{
+   system("C:\\Windows\\System32\\ipconfig");
+   getch();
+ }
+
+Output of program: ( In Windows 7)
+
+
+
+C PROGRAM TO PRINT DATE
+This c program prints current system date. To print date we will use getdate function.
+C PROGRAMMING CODE (WORKS IN TURBO C ONLY)
+#include <stdio.h>
+#include <conio.h>
+#include <dos.h>
+void main()
+{
+   struct date d;
+   clrscr();
+   getdate(&d);
+   printf("Current system date is %d/%d/%d",d.da_day,d.da_mon,d.da_year);
+   getch();
+}
+This code works in Turbo C only because it supports dos.h header file.
+
+C PROGRAM TO ADD TWO COMPLEX NUMBERS
+C PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+struct complex
+{
+   int real, img;
+};
+ void main()
+{
+   struct complex a, b, c;
+   clrscr(); 
+   printf("Enter a and b where a + ib is the first complex number.\n");
+   printf("a = ");
+   scanf("%d", &a.real);
+   printf("b = ");
+   scanf("%d", &a.img);
+   printf("Enter c and d where c + id is the second complex number.\n");
+   printf("c = ");
+   scanf("%d", &b.real);
+   printf("d = ");
+   scanf("%d", &b.img);
+   c.real = a.real + b.real;
+   c.img = a.img + b.img;
+   if ( c.img >= 0 )
+      printf("Sum of two complex numbers = %d + %di\n",c.real,c.img);
+   else
+      printf("Sum of two complex numbers = %d %di\n",c.real,c.img);
+    getch();
+}
+
+OUTPUT:
+ENTER A AND B WHERE A+IB IS TH FIRST COMPLEX NUMBER.
+A=3
+B=4
+ENTER C AND D WHERE C+ID IS THE SECOND COMPLEX NUMBER.
+C=2
+D=1
+SUM OF TWO COMPLEX NUMBER=5+5I.
+
+
+C PROGRAM TO GENERATE RANDOM NUMBERS
+This c program generates random numbers using random function, randomize function is used to initialize random number generator. If you don't use randomize function then you will get same random numbers each time you run the program.
+C PROGRAMMING CODE USING RAND
+#include <stdio.h>
+#include <stdlib.h>
+void main() 
+{
+  int c, n;
+  clrscr(); 
+  printf("Ten random numbers in [1,100]\n");
+  for (c = 1; c <= 10; c++) 
+  {
+    n = rand()%100 + 1;
+    printf("%d\n", n);
+  }
+  getch();
+}
+C PROGRAMMING CODE USING RANDOM FUNCTION(TURBO C COMPILER ONLY)
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+main()
+{
+   int n, max, num, c;
+   clrscr(); 
+   printf("Enter the number of random numbers you want ");
+   scanf("%d",&n);
+   printf("Enter the maximum value of random number ");
+   scanf("%d",&max);
+   printf("%d random numbers from 0 to %d are :-\n",n,max);
+   randomize();
+   for ( c = 1 ; c <= n ; c++ )
+   {
+      num = random(max);
+      printf("%d\n",num);
+   }
+   getch();
+   return 0;
+}
+
+
+C PROGRAM TO DELETE A FILE
+This c program deletes a file which is entered by the user, the file to be deleted should be present in the directory in which the executable file of this program is present. Extension of the file should also be entered, remove macro is used to delete the file. If there is an error in deleting the file then an error will be displayed using perror function.
+C PROGRAMMING CODE
+#include<stdio.h>
+#include<conio.h> 
+void main()
+{
+   int status;
+   char file_name[25];
+   clrscr();
+   printf("Enter the name of file you wish to delete\n");
+   gets(file_name);
+   status = remove(file_name);
+   if( status == 0 )
+      printf("%s file deleted successfully.\n",file_name);
+   else
+   {
+      printf("Unable to delete the file\n");
+      perror("Error");
+   }
+   getch();
+}
+OUTPUT OF PROGRAM:
+ENTER TH NAME OF THE FILE YOU WISH TO DELETE
+LEAP-YEAR.C
+LEAP-YEAR.C FILE DELETED SUCCESSFULLY.
+
+PROCESS RETURNED 0(0X0)  EXECUTION TIME:9.829S
+PRESS ANY KEY TO CONTINUE.
+_
+
+
+
+C PROGRAM TO LIST FILES IN DIRECTORY
+This program list all files present in a directory/folder in which this executable file is present. For example if this executable file is present in C:\\TC\\BIN then it will lists all the files present in C:\\TC\\BIN.
+C PROGRAMMING CODE(TURBO C COMPILER ONLY)
+#include <stdio.h>
+#include <conio.h>
+#include <dir.h>
+int main()
+{
+   int done;
+   struct ffblk a;
+   clrscr();
+   printf("Press any key to view the files in the current directory\n");
+   getch();
+   done = findfirst("*.*",&a,0);
+   while(!done)
+   {
+      printf("%s\n",a.ff_name);
+      done = findnext(&a);
+   }
+   getch();
+   return 0;
+}
+Obviously you will get a different output when you will execute this file on your computer.
+
+
+LINEAR SEARCH IN C
+The following code implements linear search (Searching algorithm) which is used to find whether a given number is present in an array and if it is present then at what location it occurs. It is also known as sequential search. It is very simple and works as follows: We keep on comparing each element with the element to search until the desired element is found or list ends. Linear search in c language for multiple occurrences and using function.
+LINEAR SEARCH C PROGRAM
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int array[100], search, c, n;
+   printf("Enter the number of elements in array\n");
+   scanf("%d",&n);
+   printf("Enter %d integer(s)\n", n);
+   for (c = 0; c < n; c++)
+   scanf("%d", &array[c]);
+   printf("Enter the number to search\n");
+   scanf("%d", &search);
+   for (c = 0; c < n; c++)
+   {
+      if (array[c] == search)     /* if required element found */
+      {
+         printf("%d is present at location %d.\n", search, c+1);
+         break;
+      }
+   }
+   if (c == n)
+      printf("%d is not present in array.\n", search);
+   getch();
+}
+
+Output of program:
+ENTER THE NUBER OF ELEMENTS IN ARRAY
+5
+ENTER 5 NUMBERS
+5
+6
+4
+2
+9
+ENTER THE NUMBER TO SEARCH
+4
+4 IS PRESENT AT LOCATION 3.
+
+
+
+Linear search for multiple occurrences
+In the code below we will print all the locations at which required element is found and also the number of times it occur in the list.
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int array[100], search, c, n, count = 0;
+   clrscr(); 
+   printf("Enter the number of elements in array\n");
+   scanf("%d",&n);
+   printf("Enter %d numbers\n", n);
+   for ( c = 0 ; c < n ; c++ )
+   scanf("%d",&array[c]);
+   printf("Enter the number to search\n");
+   scanf("%d",&search);
+   for ( c = 0 ; c < n ; c++ )
+   {
+      if ( array[c] == search )    
+      {
+         printf("%d is present at location %d.\n", search, c+1);
+  count++;
+      }
+   }
+   if ( count == 0 )
+      printf("%d is not present in array.\n", search);
+   else
+      printf("%d is present %d times in array.\n", search, count);
+   getch();
+}
+OUTPUT OF THE PROGRAM:
+ENTER THE NUMBER OF ELEMENTS IN ARRAY
+7
+ENTER 7 NUMBERS
+1
+2
+4
+2
+2
+5
+8
+ENTER THE NUMBER TO SEARCH
+2
+2 IS PRESENT AT LOCATION 2.
+2 IS PRESENT AT LOCATION 4.
+2 IS PRESENT AT LOCATION 5.
+2 IS PRESENT 3 TIMES IN ARRAY.
+
+C PROGRAM FOR LINEAR SEARCH USING FUNCTION
+#include <stdio.h>
+#include<conio.h> 
+int linear_search(int*, int, int);
+void main()
+{
+   int array[100], search, c, n, position;
+   clrscr(); 
+   printf("Enter the number of elements in array\n");
+   scanf("%d",&n);
+   printf("Enter %d numbers\n", n);
+   for ( c = 0 ; c < n ; c++ )
+   scanf("%d", &array[c]);
+   printf("Enter the number to search\n");
+   scanf("%d",&search);
+   position = linear_search(array, n, search);
+   if ( position == -1 )
+      printf("%d is not present in array.\n", search);
+   else
+      printf("%d is present at location %d.\n", search, position+1);
+    getch();
+} 
+int linear_search(int *pointer, int n, int find)
+{
+   int c;
+   for ( c = 0 ; c < n ; c++ )
+   {
+      if ( *(pointer+c) == find )
+         return c;
+   }
+   return -1;
+}
+Time required to search an element using linear search algorithm depends on size of list. In best case element is present at beginning of list and in worst case element is present at the end. Time complexity of linear search is O(n).
+
+
+
+ 
+
+
+Deleted file doesn't go to trash or recycle bin so you may not be able to recover it. Deleted files can be recovered using special recovery software if the files are not overwritten on the storage medium.
+
+
+
+
+C PROGRAM FOR BINARY SEARCH
+C program for binary search: This code implements binary search in c language. It can only be used for sorted arrays, but it's fast as compared to linear search. If you wish to use binary search on an array which is not sorted then you must sort it using some sorting technique say merge sort and then use binary search algorithm to find the desired element in the list. If the element to be searched is found then its position is printed.
+
+The code below assumes that the input numbers are in ascending order.
+C PROGRAMMING CODE
+#include <stdio.h>
+#include<conio.h> 
+void main()
+{
+   int c, first, last, middle, n, search, array[100];
+   clrscr();
+   printf("Enter number of elements\n");
+   scanf("%d",&n);
+   printf("Enter %d integers\n", n);
+   for ( c = 0 ; c < n ; c++ )
+   scanf("%d",&array[c]);
+   printf("Enter value to find\n");
+   scanf("%d",&search);
+   first = 0;
+   last = n - 1;
+   middle = (first+last)/2;
+   while( first <= last )
+   {
+      if ( array[middle] < search )
+         first = middle + 1;    
+      else if ( array[middle] == search ) 
+      {
+         printf("%d found at location %d.\n", search, middle+1);
+         break;
+      }
+      else
+         last = middle - 1;
+         middle = (first + last)/2;
+   }
+   if ( first > last )
+      printf("Not found! %d is not present in the list.\n", search);
+    getch();   
+}
+OUTPUT OF PROGRAM:
+ENTER NUMBER OF ELEMENTS
+7
+ENTER 7 INTEGERS
+-4
+5
+8
+9
+11
+43
+485
+ENTER VALUE TO FIND
+11
+11 FOUND AT LOCATION 5.
+
+
+Binary search is faster than linear search but list should be sorted, hashing is faster than binary search and perform searches in constant time.
+
+
+
+
+Binary search is faster than linear search but list should be sorted, hashing is faster than binary search and perform searches in constant time.
